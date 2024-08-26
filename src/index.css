@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: black;
+    
+}
+
+@font-face {
+    font-family: 'Asteriod';
+    src: url("./assets/fonts/SdAsteroidB612-wo3e2.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.asteriod{
+    font-family: 'Asteriod', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+/* From Uiverse.io by Smit-Prajapati */ 
+.card {
+    
+    width: 350px;
+    border-radius: 20px;
+    background: #000000;
+    
+    padding: 5px;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card:hover {
+    transform: scale(1.01);
+  }
+   
+   
+  
+  .card .top-section {
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-position-y: 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .card .top-section .cardborder{
+    border-bottom-right-radius: 10px;
+    height: 30px;
+    width: 130px;
+    background: white;
+    background: #000000;
+    position: relative;
+    transform: skew(-40deg);
+    box-shadow: -10px -10px 0 0 #000000;
+  }
+  
+  .card .top-section .cardborder:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    right: -15px;
+    background: rgba(255, 255, 255, 0);
+    border-top-left-radius: 10px;
+    box-shadow: -5px -5px 0 2px #000000;
+  }
+  
+  .card .top-section::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: rgba(255, 255, 255, 0);
+    height: 15px;
+    width: 15px;
+    border-top-left-radius: 15px;
+    box-shadow: -5px -5px 0 2px #000000;
+  }
+  
+  .card .top-section .icons {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card .top-section .icons .logo {
+    height: 100%;
+    width: 43%;
+    aspect-ratio: 1;
+    padding: 7px 0 7px 15px;
+  }
+  
+  .card .top-section .icons .logo .top-section {
+    height: 100%;
+  }
+  
+  .card .top-section .icons .social-media {
+    height: 100%;
+    padding: 8px 15px;
+    display: flex;
+    gap: 7px;
+  }
+  
+  
+  .card .bottom-section {
+    margin-top: 15px;
+    padding: 10px 5px;
+  }
+  
+  .card .bottom-section .title {
+    
+    display: block;
+    font-size: 17px;
+    font-weight: bolder;
+    color: red;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+
+/* gif-section   */
+
+/* .gif-section{
+  background-image: url('./components/About/mediaImg/DeWatermark.ai_1724509915453.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100rem;
+  height: 10rem;
+  position: absolute;
+  z-index: -20;
+  
+} */
+
+.skyimage{
+  background-image: url('./assets/images/home/sky1.jpg');
+}
+ 
+@layer utilities {
+   
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+  }
+}
+
