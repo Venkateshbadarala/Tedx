@@ -1,19 +1,15 @@
 import React from 'react'
-import image from './mediaImg/DeWatermark.ai_1724509915453.png'
+
 const Content = () => {
   return (
     <div className='text-white pt-[10rem] flex flex-col justify-center items-center space-y-20 '
-    style={{  backgroundImage: `url(${image})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundSize:'contain',
     
-}} 
     >
         
         <div className='flex flex-col gap-16'>
              
         <div className='flex flex-col items-center justify-center '>
-                        <h2 className='text-5xl text-red-600 border-b  border-b'>What is TED?</h2>
+                        <h2 className='text-5xl text-red-600 border-b'>What is TED?</h2>
                         <h3 className='px-[10vw] pt-8 text-xl font-light'>
                         Technology, Entertainment and Design,the set of global conferences have been going with the spirit of ideas worth spreading since 1984. TED is a global community, welcoming people from every discipline and culture who seek a deeper understanding of the world. TED believes passionately in the power of ideas to change attitudes, lives and, ultimately, the world. TED is owned by a nonprofit, nonpartisan foundation. The agenda is to make great ideas accessible and spark conversation.
 

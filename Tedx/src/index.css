@@ -142,33 +142,80 @@ body {
   }
 
 
-/* gif-section   */
 
-/* .gif-section{
-  background-image: url('./components/About/mediaImg/DeWatermark.ai_1724509915453.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100rem;
-  height: 10rem;
-  position: absolute;
-  z-index: -20;
-  
-} */
 
 .skyimage{
   background-image: url('./assets/images/home/sky1.jpg');
 }
  
-@layer utilities {
-   
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none; 
-  }
+ /* input */
+ .wave-group {
+  position: relative;
 }
 
+.wave-group .editinput {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  font-weight: normal;
+  border: none;
+  color: aliceblue;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+}
+
+.wave-group .editinput:focus,
+.wave-group .editinput:not(:placeholder-shown) {
+  outline: none;
+}
+
+.wave-group .editlabel {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  display: flex;
+  transition: 0.2s ease all;
+}
+
+.wave-group .editinput:focus ~ .editlabel,
+.wave-group .editinput:not(:placeholder-shown) ~ .editlabel {
+  transform: translateY(-20px);
+  font-size: 16px;
+  font-weight: 800;
+  color: #fd0202;
+}
+
+.wave-group .editbar {
+  position: relative;
+  display: block;
+}
+
+.wave-group .editbar:before,
+.wave-group .editbar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #c12d2d;
+  transition: 0.2s ease all;
+}
+
+.wave-group .editbar:before {
+  left: 50%;
+}
+
+.wave-group .editbar:after {
+  right: 50%;
+}
+
+.wave-group .editinput:focus ~ .editbar:before,
+.wave-group .editinput:focus ~ .editbar:after,
+.wave-group .editinput:not(:placeholder-shown) ~ .editbar:before,
+.wave-group .editinput:not(:placeholder-shown) ~ .editbar:after {
+  width: 50%;
+}

@@ -27,30 +27,29 @@ const Media = () => {
     { id: 7, src: 'https://www.youtube.com/embed/LTnI7cmpDZI' },
     { id: 8, src: 'https://www.youtube.com/embed/cdZZpaB2kDM' },
   ];
+
   return (
-    <div className="container flex flex-col gap-10 px-4 py-10 mx-auto">
-        <div>
-        <div className="mb-12 text-center">
+    <div className="container px-4 py-10 mx-auto">
+      <div className="mb-12 text-center">
         <h2 className="text-4xl font-bold text-red-600">MEDIA</h2>
       </div>
 
-      <div className="grid grid-cols-3 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-3 gap-8 mb-12 sm:grid-cols-2 lg:grid-cols-3">
         {mediaData.map((item) => (
           <div
             key={item.id}
-            className="relative overflow-hidden transition-transform duration-500 transform rounded-lg shadow-lg group group-hover:scale-105"
+            className="relative overflow-hidden transition-transform duration-300 ease-in-out rounded-lg shadow-lg group"
           >
             <LightGalleryWrapper
-            images={[{image:item.src ,alt:item.id}]}
-            className="w-full h-full "
+              images={[{ image: item.src, alt: `Image ${item.id}` }]}
+              className="object-cover w-full h-full transition-transform duration-500 transform group-hover:scale-105 group-hover:opacity-90"
             />
+            <div className="absolute inset-0 transition-opacity duration-300 bg-black opacity-0 group-hover:opacity-40"></div>
           </div>
         ))}
-      </div> 
-        </div>
-     
-     <div>
-     <div className="mb-12 text-center">
+      </div>
+
+      <div className="mb-12 text-center">
         <h2 className="text-4xl font-bold text-red-600">VIDEOS</h2>
       </div>
 
@@ -58,25 +57,18 @@ const Media = () => {
         {videoData.map((item) => (
           <div
             key={item.id}
-            className="relative overflow-hidden rounded-lg shadow-lg group"
+            className="relative overflow-hidden transition-transform duration-300 ease-in-out rounded-lg shadow-lg group"
           >
-            <div className="h-[15rem] aspect-w-16">
-              <iframe
-                src={item.src}
-                title={`video-${item.id}`}
-                className="object-cover w-full h-full transition-transform duration-500 transform group-hover:scale-105"
-                allowFullScreen
-              ></iframe>
-            </div>
-           
+            <iframe
+              src={item.src}
+              title={`video-${item.id}`}
+              className="w-full h-[15rem] object-cover transition-transform duration-500 transform group-hover:scale-105"
+              allowFullScreen
+            ></iframe>
+            <div className="absolute inset-0 transition-opacity duration-300 bg-black opacity-0 group-hover:opacity-40"></div>
           </div>
         ))}
       </div>
-     </div>
-
-   
-
-      
     </div>
   );
 };
