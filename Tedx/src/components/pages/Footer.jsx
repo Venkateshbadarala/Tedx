@@ -4,7 +4,7 @@ import { TfiEmail } from "react-icons/tfi";
 import { Link } from 'react-router-dom';
 import { IoLocationOutline } from "react-icons/io5";
 import { LuPhoneCall } from "react-icons/lu";
-import Feedback from '../Feedback';
+import Feedback from '../FeedbackModal/Feedback';
 
 const socailmedia = [
   {
@@ -39,10 +39,10 @@ const contact = [
 const Footer = () => {
   return (
     <footer className="w-full py-4 text-white" id='footer'>
-      <div className="flex flex-wrap justify-center gap-16">
-        <div className='flex flex-col gap-16'>
+      <div className="flex flex-wrap justify-center gap-14">
+        <div className='flex flex-col gap-16 x-sm:flex-col x-sm:gap-5 sm:flex-col'>
           <div className="flex flex-col gap-2 w-[20rem]">
-            <h3 className="pb-1 text-xl font-bold text-red-600 border-b">Contact Info</h3>
+            <h3 className="pb-1 font-bold text-red-600 border-b sm:text-xl x-sm:text-[18px]">Contact Info</h3>
             <h2 className='text-sm font-medium'>
               {
                 contact.map((item, index) => (
@@ -57,12 +57,13 @@ const Footer = () => {
                 ))
               }
             </h2>
+        
           </div>
 
-          {/* Social Media */}
-          <div className="flex flex-col">
-            <h3 className="pb-1 mb-2 text-xl font-bold text-red-600 border-b">Follow Us</h3>
-            <div className="flex mt-4 space-x-5">
+        
+          <div className="flex flex-col x-sm:mt-2">
+            <h3 className="pb-1 mb-2 sm:text-xl font-bold text-red-600 border-b x-sm:text-[18px]">Follow Us</h3>
+            <div className="flex mt-4 x-sm:items-center x-sm:justify-start sm:space-x-5 x-sm:flex-row sm:flex-row x-sm:gap-4 sm:justify-start">
               {
                 socailmedia.map((item, index) => (
                   <div key={index}>
@@ -76,7 +77,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='flex flex-col -mt-2'>
+        <div className='flex flex-col items-center justify-center -mt-2 x-sm:hidden sm:hidden md:flex'>
           <Feedback />
         </div>
 
@@ -88,11 +89,15 @@ const Footer = () => {
             height="280"
             allowFullScreen=""
             loading="lazy"
-            className="border-0 rounded-lg"
+            className="border-0 rounded-lg x-sm:w-[20rem] sm:w-[20rem] md:w-[30rem] sm:h-[14rem] md:h-[16rem]"
             title="Vishnu Institute Of Technology"
           ></iframe>
         </div>
+        
       </div>
+      <div className='flex flex-col items-center justify-center x-sm:mt-4 md:hidden'>
+          <Feedback />
+        </div>
 
       {/* Copyright */}
       <div className="mt-6 text-sm text-center">

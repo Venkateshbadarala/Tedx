@@ -55,9 +55,9 @@ const PricingCards = () => {
           ))}
         </div>
       ) : (
-        <div className='text-[3.5rem] text-red-600 flex flex-col justify-center items-center font-bold'>
+        <div className='text-[3.5rem] text-red-600 flex flex-col justify-center items-center font-bold p-4'>
           {/* <h1 className='uppercase'>#season 02</h1> */}
-          <h1 className='text-[20px] montserrat tracking-widest uppercase'>Stay tuned for more updates...</h1>
+          <h1 className='sm:text-[20px] montserrat tracking-widest uppercase x-sm:text-[13px]'>Stay tuned for more updates...</h1>
         </div>
       )}
     </>

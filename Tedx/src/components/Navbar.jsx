@@ -35,7 +35,7 @@ const Navbar = () => {
     { name: 'Editions', link: '#' },
   ];
 
-  const Editions = [{ name: 'Season 1', link: '/Courses/1' }];
+  const Editions = [{ name: 'Season 1', link: 'https://venkateshbadarala.github.io/Old_Tedx/' }];
 
   return (
     <motion.div
@@ -47,15 +47,18 @@ const Navbar = () => {
       transition={{ duration: 0.4, ease: 'easeInOut' }}
       className="fixed z-50 flex flex-col"
     >
-      <div className="flex flex-row items-center justify-around font-bold text-white bg-black tablet:p-4 rounded-[10px] w-[100vw] ">
-        <div className="laptop:text-[] tablet:w-[20rem] ">
+      <div className="flex flex-row items-center justify-around font-bold text-white bg-black sm:p-4 rounded-[10px] w-[100vw] ">
+        <div className="x-sm:w-[14rem] sm:w-[20rem] ">
+          <Link to='/' >
           <img src={logo} alt="Logo" />
+          </Link>
+          
         </div>
-        <div className="flex flex-row justify-center items-center tablet:text-[15px] tablet:space-x-10 phone:space-x-2 phone:text-[10px]">
+        <div className="flex flex-row justify-center items-center sm:text-[15px] sm:space-x-10 x-sm:space-x-2 x-sm:text-[10px]">
           {header.map((item, index) => (
             <div
               key={index}
-              className="relative tablet:hidden laptop:flex "
+              className="relative sm:hidden md:flex x-sm:hidden "
               onMouseEnter={() => {
                 if (item.name === 'Editions') {
                   setIsEditionsOpen(true);
@@ -114,10 +117,10 @@ const Navbar = () => {
             </div>
           ))}
         </div>
-        <div className="bg-red-600 p-2 rounded-[5px]">
+        <div className="bg-red-600 p-2 rounded-[5px] x-sm:text-[9px] sm:text-[1rem]">
           <h1>Buy Tickets</h1>
         </div>
-        <div className="laptop:hidden">
+        <div className="left-0 lg:hidden">
           <Burgermenu header={header} Editions={Editions} />
         </div>
       </div>

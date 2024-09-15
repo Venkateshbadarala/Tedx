@@ -5,18 +5,17 @@ import sitaudi1 from './mediaImg/sitaaudi2.png';
 import sitaudi2 from './mediaImg/sitaaudi3.png';
 import sitaudi3 from './mediaImg/sitaaudi4.png';
 import image from './mediaImg/imgm2.png';
-import LightGalleryWrapper from '../LightGallery';
 
 const Media = () => {
   const mediaData = [
-    { id: 1, src: banner },
-    { id: 2, src: sitaudi },
-    { id: 3, src: sitaudi1 },
-    { id: 4, src: sitaudi2 },
-    { id: 5, src: sitaudi3 },
-    { id: 6, src: image },
+    { id: 1, src: banner, alt: 'Banner' },
+    { id: 2, src: sitaudi, alt: 'Sita Auditorium 1' },
+    { id: 3, src: sitaudi1, alt: 'Sita Auditorium 2' },
+    { id: 4, src: sitaudi2, alt: 'Sita Auditorium 3' },
+    { id: 5, src: sitaudi3, alt: 'Sita Auditorium 4' },
+    { id: 6, src: image, alt: 'Image M2' },
   ];
-  
+
   const videoData = [
     { id: 1, src: 'https://www.youtube.com/embed/lmyZMtPVodo' },
     { id: 2, src: 'https://www.youtube.com/embed/iCvmsMzlF7o' },
@@ -34,15 +33,16 @@ const Media = () => {
         <h2 className="text-4xl font-bold text-red-600">MEDIA</h2>
       </div>
 
-      <div className="grid grid-cols-3 gap-8 mb-12 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-3 gap-8 mb-12 sm:grid-cols-2 lg:grid-cols-3 x-sm:grid-cols-1">
         {mediaData.map((item) => (
           <div
             key={item.id}
             className="relative overflow-hidden transition-transform duration-300 ease-in-out rounded-lg shadow-lg group"
           >
-            <LightGalleryWrapper
-              images={[{ image: item.src, alt: `Image ${item.id}` }]}
-              className="object-cover w-full h-full transition-transform duration-500 transform group-hover:scale-105 group-hover:opacity-90"
+            <img
+              src={item.src}
+              alt={item.alt}
+              className="w-full h-full transition-transform duration-500 transform object-fit group-hover:scale-105 group-hover:opacity-90"
             />
             <div className="absolute inset-0 transition-opacity duration-300 bg-black opacity-0 group-hover:opacity-40"></div>
           </div>
@@ -53,7 +53,7 @@ const Media = () => {
         <h2 className="text-4xl font-bold text-red-600">VIDEOS</h2>
       </div>
 
-      <div className="grid grid-cols-3 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-3 gap-8 sm:grid-cols-2 lg:grid-cols-3 x-sm:grid-cols-1">
         {videoData.map((item) => (
           <div
             key={item.id}
@@ -62,7 +62,7 @@ const Media = () => {
             <iframe
               src={item.src}
               title={`video-${item.id}`}
-              className="w-full h-[15rem] object-cover transition-transform duration-500 transform group-hover:scale-105"
+              className="w-full h-[15rem] transition-transform duration-500 transform group-hover:scale-105"
               allowFullScreen
             ></iframe>
             <div className="absolute inset-0 transition-opacity duration-300 bg-black opacity-0 group-hover:opacity-40"></div>

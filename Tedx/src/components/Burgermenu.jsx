@@ -10,7 +10,7 @@ const Burgermenu = ({ header, Editions }) => {
 
   return (
     <div>
-      <div className="p-4 md:hidden">
+      <div className="p-4 lg:hidden ">
         <button
           className="text-2xl text-white focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}

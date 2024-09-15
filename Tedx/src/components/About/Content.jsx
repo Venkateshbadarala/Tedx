@@ -2,24 +2,24 @@ import React from 'react'
 
 const Content = () => {
   return (
-    <div className='text-white pt-[10rem] flex flex-col justify-center items-center space-y-20 '
+    <div className='text-white pt-[8rem] flex flex-col justify-center items-center space-y-20 '
     
     >
         
         <div className='flex flex-col gap-16'>
              
         <div className='flex flex-col items-center justify-center '>
-                        <h2 className='text-5xl text-red-600 border-b'>What is TED?</h2>
-                        <h3 className='px-[10vw] pt-8 text-xl font-light'>
+                        <h2 className='text-red-600 border-b sm:text-5xl x-sm:text-3xl'>What is TED?</h2>
+                        <h3 className='px-[10vw] pt-8 sm:text-xl font-light x-sm:text-[14px]'>
                         Technology, Entertainment and Design,the set of global conferences have been going with the spirit of ideas worth spreading since 1984. TED is a global community, welcoming people from every discipline and culture who seek a deeper understanding of the world. TED believes passionately in the power of ideas to change attitudes, lives and, ultimately, the world. TED is owned by a nonprofit, nonpartisan foundation. The agenda is to make great ideas accessible and spark conversation.
 
                         </h3>
                     </div>
       
                     <div className='flex flex-col items-center justify-center '>
-                        <h2 className='text-5xl font-bold text-red-600 border-b '>WHY TED<sup>x</sup> ?</h2>
-                        <h3 className='px-[10vw] pt-8 text-xl font-light'>
-                            <b className='text-4xl '>Imagine</b>&nbsp; yourself walking on your terrace during darks,
+                        <h2 className='font-bold text-red-600 border-b sm:text-5xl x-sm:text-3xl '>WHY TED<sup>x</sup> ?</h2>
+                        <h3 className='px-[10vw] pt-8 sm:text-xl font-light x-sm:text-[14px]'>
+                            <b className='sm:text-4xl x-sm:text-3xl '>Imagine</b>&nbsp; yourself walking on your terrace during darks,
                             sweeping off the many mosquitoes,while juggling between the questions about boundaries of
                             life. If constraints define boundaries, TED defines essence of having no limits. TED which
                             means Technology Entertainment and Design, is a defined platform for infinite definitions.
@@ -37,10 +37,10 @@ const Content = () => {
 
                
                   
-                    <div class="flex flex-col items-center justify-center p-10 ">
+                    <div class="flex flex-col items-center justify-center  ">
                     
-                        <h2 className='text-5xl text-red-600 border-b '>WE THE Vishnu Institute . .</h2>
-                        <h3 className='px-[10vw] pt-8 text-xl font-light' >Where the doozy strands of this world are surprisingly diverse, the idealities beyond the
+                        <h2 className='text-red-600 border-b md:text-5xl sm:text-4xl x-sm:text-2xl'>WE THE Vishnu Institute . .</h2>
+                        <h3 className='px-[10vw] pt-8 sm:text-xl font-light x-sm:text-[14px]' >Where the doozy strands of this world are surprisingly diverse, the idealities beyond the
                             platforms are amazingly braided. Imagination is the space of the beyond; TEDxVishnuInstitute
                             welcomes it for a spread over its venue. Our speakers unlock
                             the caps of this space, clinging over the infinites of a brain. Going through disparate

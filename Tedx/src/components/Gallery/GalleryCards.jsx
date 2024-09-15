@@ -9,7 +9,7 @@ export default function Gallery() {
     const categories = GalleryCategories ? Object.keys(GalleryCategories) : [];
 
     return (
-        <div className="gallery-container">
+        <div className="px-10 pt-20 gallery-container">
             
             {categories.length > 0 ? (
                 categories.map(category => (

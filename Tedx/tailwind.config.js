@@ -7,10 +7,10 @@ module.exports = {
     
     },
     screens: {
-      'phone': '310px',
-      'tablet': '640px',
-      'laptop': '1024px',
-      'desktop': '1280px',
+      'x-sm': '310px',
+      'sm': '640px',
+      'md': '1024px',
+      'lg': '1280px',
     },
   },
   plugins: [],

@@ -27,19 +27,19 @@ const transporter = nodemailer.createTransport({
 
 app.use(express.static(path.join(__dirname, '../tedx/build')));
 
-// Serve the home page on the root route
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../tedx/build', 'index.html'));
 });
 
-// POST endpoint to send email
+
 app.post('/send-email', (req, res) => {
   const { name, email, message } = req.body;
   console.log(name, email, message);
 
   const mailOptions = {
     from: email,
-    to: process.env.EMAIL_USER, // Recipient email
+    to: process.env.EMAIL_USER, 
     subject: name,
     text: message,
   };

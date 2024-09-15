@@ -1,29 +1,22 @@
-import chairman from '../../assets/images/teamphotos/Vishnuraju.png';
-import director from '../../assets/images/teamphotos/Director.png';
-import suraj from '../../assets/images/teamphotos/suraj.png';
-import akash from '../../assets/images/teamphotos/Akash.png';
-import farhana from '../../assets/images/teamphotos/Farhana.png';
-import bhavani from '../../assets/images/teamphotos/bhavani.png';
-import dhanush from '../../assets/images/teamphotos/dhanush.png';
-import divya from '../../assets/images/teamphotos/divya.png';
-import vineeth from '../../assets/images/teamphotos/vineeth.png';
-import sahitha from '../../assets/images/teamphotos/sahitha.png';
-import bhavana from '../../assets/images/teamphotos/bhavana.png';
-import satvika from '../../assets/images/teamphotos/sathvika.png';
+import pic1 from '../../components/Gallery/GalleryImg/DSC02929.JPG';
+import pic2 from '../../components/Gallery/GalleryImg/AdityaHassan.png';
+import pic3 from '../../components/Gallery/GalleryImg/DSC03002.JPG';
+import pic4 from '../../components/Gallery/GalleryImg/DSC03255.JPG';
+import pic5 from '../../components/Gallery/GalleryImg/DSC03270.JPG';
+import pic6 from '../../components/Gallery/GalleryImg/durgaglk.png';
+import pic7 from '../../components/Gallery/GalleryImg/TEDx Stage photo.jpg';
+
 
 export const GalleryCategories = {
   "Image Gallery": [
-    { image: chairman, alt: "Chairman" },
-    { image: director, alt: "Director" },
-    { image: suraj, alt: "Suraj" },
-    { image: akash, alt: "Akash" },
-    { image: farhana, alt: "Farhana" },
-    { image: bhavani, alt: "Bhavani" },
-    { image: dhanush, alt: "Dhanush" },
-    { image: divya, alt: "Divya" },
-    { image: vineeth, alt: "Vineeth" },
-    { image: sahitha, alt: "Sahitha" },
-    { image: bhavana, alt: "Bhavana" },
-    { image: satvika, alt: "Satvika" },
+    { image: pic1, alt: "pic1" },
+    { image: pic2, alt: "pic2" },
+    { image: pic3, alt: "Suraj" },
+    { image: pic4, alt: "Akash" },
+    { image: pic5, alt: "Farhana" },
+    { image: pic6, alt: "Bhavani" },
+    { image: pic7, alt: "Dhanush" },
+    
+    
   ],
 };
