@@ -3,11 +3,16 @@ import { Link, useLocation } from 'react-router-dom';
 import Burgermenu from './Burgermenu';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import logo from '../assets/images/home/logo.jpg';
-
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
+import { Link as ScrollLink } from 'react-scroll';
 
-
-import { Link as ScrollLink } from 'react-scroll'; 
+// Hook to detect touch screen devices
+const useIsTouchDevice = () => {
+  if (typeof window !== 'undefined') {
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  }
+  return false;
+};
 
 const Navbar = () => {
   const [isEditionsOpen, setIsEditionsOpen] = useState(false);
@@ -15,7 +20,8 @@ const Navbar = () => {
   const { pathname } = location;
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
-
+  const isTouchDevice = useIsTouchDevice(); 
+  
   useMotionValueEvent(scrollY, 'change', (latest) => {
     const previous = scrollY.getPrevious();
     if (latest > previous && latest > 20) {
@@ -37,6 +43,13 @@ const Navbar = () => {
 
   const Editions = [{ name: 'Season 1', link: 'https://venkateshbadarala.github.io/Old_Tedx/' }];
 
+  const scrollToFooter = () => {
+    const footerElement = document.getElementById('footer');
+    if (footerElement) {
+      footerElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <motion.div
       variants={{
@@ -49,16 +62,15 @@ const Navbar = () => {
     >
       <div className="flex flex-row items-center justify-around font-bold text-white bg-black sm:p-4 rounded-[10px] w-[100vw] ">
         <div className="x-sm:w-[14rem] sm:w-[20rem] ">
-          <Link to='/' >
-          <img src={logo} alt="Logo" />
+          <Link to='/'>
+            <img src={logo} alt="Logo" />
           </Link>
-          
         </div>
         <div className="flex flex-row justify-center items-center sm:text-[15px] sm:space-x-10 x-sm:space-x-2 x-sm:text-[10px]">
           {header.map((item, index) => (
             <div
               key={index}
-              className="relative sm:hidden md:flex x-sm:hidden "
+              className="relative sm:hidden md:flex x-sm:hidden"
               onMouseEnter={() => {
                 if (item.name === 'Editions') {
                   setIsEditionsOpen(true);
@@ -70,16 +82,24 @@ const Navbar = () => {
                 }
               }}
             >
-             
               {item.name === 'Venue' ? (
-                <ScrollLink
-                  to="footer"
-                  smooth={true}
-                  duration={500}
-                  className="text-white cursor-pointer hover:text-red-600"
-                >
-                  {item.name}
-                </ScrollLink>
+                isTouchDevice ? (
+                  <button
+                    onClick={scrollToFooter}
+                    className="text-white cursor-pointer hover:text-red-600"
+                  >
+                    {item.name}
+                  </button>
+                ) : (
+                  <ScrollLink
+                    to="footer"
+                    smooth={true}
+                    duration={500}
+                    className="text-white cursor-pointer hover:text-red-600"
+                  >
+                    {item.name}
+                  </ScrollLink>
+                )
               ) : (
                 <Link
                   to={item.link}

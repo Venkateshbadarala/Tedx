@@ -89,7 +89,7 @@ const Feedback = () => {
                       name="email"
                       value={formData.email}
                       placeholder=" "
-                      className="w-full editinput"
+                      className="w-full bg-black editinput"
                       onChange={handleChange}
                     />
                     <span className="editbar"></span>

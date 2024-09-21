@@ -1,22 +1,18 @@
-import pic1 from '../../components/Gallery/GalleryImg/DSC02929.JPG';
-import pic2 from '../../components/Gallery/GalleryImg/AdityaHassan.png';
-import pic3 from '../../components/Gallery/GalleryImg/DSC03002.JPG';
-import pic4 from '../../components/Gallery/GalleryImg/DSC03255.JPG';
-import pic5 from '../../components/Gallery/GalleryImg/DSC03270.JPG';
-import pic6 from '../../components/Gallery/GalleryImg/durgaglk.png';
-import pic7 from '../../components/Gallery/GalleryImg/TEDx Stage photo.jpg';
-
-
-export const GalleryCategories = {
-  "Image Gallery": [
-    { image: pic1, alt: "pic1" },
-    { image: pic2, alt: "pic2" },
-    { image: pic3, alt: "Suraj" },
-    { image: pic4, alt: "Akash" },
-    { image: pic5, alt: "Farhana" },
-    { image: pic6, alt: "Bhavani" },
-    { image: pic7, alt: "Dhanush" },
-    
-    
-  ],
-};
+export const GalleryCategories = [
+  { image: () => import('../../components/Gallery/GalleryImages/DSC02929.png'), alt: "pic1" },
+  { image: () => import('../../components/Gallery/GalleryImages/AdityaHassan.png'), alt: "pic2" },
+  { image: () => import('../../components/Gallery/GalleryImages/DSC03002.png'), alt: "pic3" },
+  { image: () => import('../../components/Gallery/GalleryImages/DSC03255.png'), alt: "pic4" },
+  { image: () => import('../../components/Gallery/GalleryImages/DSC03270.png'), alt: "pic5" },
+  { image: () => import('../../components/Gallery/GalleryImages/durgaglk.png'), alt: "pic6" },
+  { image: () => import('../../components/Gallery/GalleryImages/TEDx Stage photo.png'), alt: "pic7" },
+  { image: () => import('../../components/Gallery/GalleryImages/DSC03003.png'), alt: "pic8" },
+  { image: () => import('../../components/Gallery/GalleryImages/DSC03208.png'), alt: "pic9" },
+  { image: () => import('../../components/Gallery/GalleryImages/DSC03220.png'), alt: "pic10" },
+  { image: () => import('../../components/Gallery/GalleryImages/DSC03501.png'), alt: "pic11" },
+  { image: () => import('../../components/Gallery/GalleryImages/DSC03527.png'), alt: "pic12" },
+  { image: () => import('../../components/Gallery/GalleryImages/DSC03539.png'), alt: "pic13" },
+  { image: () => import('../../components/Gallery/GalleryImages/IMG_5447.png'), alt: "pic15" },
+  { image: () => import('../../components/Gallery/GalleryImages/IMG_5217.png'), alt: "pic16" },
+  { image: () => import('../../components/Gallery/GalleryImages/IMG_5190.png'), alt: "pic17" },
+];

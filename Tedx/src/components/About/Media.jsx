@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import banner from './mediaImg/banner.png';
 import sitaudi from './mediaImg/sitaaudi1.png';
 import sitaudi1 from './mediaImg/sitaaudi2.png';
@@ -7,6 +8,14 @@ import sitaudi3 from './mediaImg/sitaaudi4.png';
 import image from './mediaImg/imgm2.png';
 
 const Media = () => {
+  const containerRef = useRef(null);
+  const { scrollY } = useScroll({
+    target: containerRef,
+    offset: ['start start', 'end end'],
+  });
+
+  const yTransform = useTransform(scrollY, [0, 200], [50, 0]); 
+
   const mediaData = [
     { id: 1, src: banner, alt: 'Banner' },
     { id: 2, src: sitaudi, alt: 'Sita Auditorium 1' },
@@ -28,16 +37,23 @@ const Media = () => {
   ];
 
   return (
-    <div className="container px-4 py-10 mx-auto">
+    <div ref={containerRef} className="container px-4 py-10 mx-auto">
       <div className="mb-12 text-center">
         <h2 className="text-4xl font-bold text-red-600">MEDIA</h2>
       </div>
 
-      <div className="grid grid-cols-3 gap-8 mb-12 sm:grid-cols-2 lg:grid-cols-3 x-sm:grid-cols-1">
+      <motion.div
+        className="grid grid-cols-3 gap-8 mb-12 sm:grid-cols-2 lg:grid-cols-3 x-sm:grid-cols-1"
+        style={{ y: yTransform }} 
+      >
         {mediaData.map((item) => (
-          <div
+          <motion.div
             key={item.id}
             className="relative overflow-hidden transition-transform duration-300 ease-in-out rounded-lg shadow-lg group"
+            initial={{ opacity: 0, y: 20 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.5, delay: item.id * 0.1 }} 
+            viewport={{ once: false }} 
           >
             <img
               src={item.src}
@@ -45,19 +61,26 @@ const Media = () => {
               className="w-full h-full transition-transform duration-500 transform object-fit group-hover:scale-105 group-hover:opacity-90"
             />
             <div className="absolute inset-0 transition-opacity duration-300 bg-black opacity-0 group-hover:opacity-40"></div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       <div className="mb-12 text-center">
         <h2 className="text-4xl font-bold text-red-600">VIDEOS</h2>
       </div>
 
-      <div className="grid grid-cols-3 gap-8 sm:grid-cols-2 lg:grid-cols-3 x-sm:grid-cols-1">
+      <motion.div
+        className="grid grid-cols-3 gap-8 sm:grid-cols-2 lg:grid-cols-3 x-sm:grid-cols-1"
+        style={{ y: yTransform }} 
+      >
         {videoData.map((item) => (
-          <div
+          <motion.div
             key={item.id}
             className="relative overflow-hidden transition-transform duration-300 ease-in-out rounded-lg shadow-lg group"
+            initial={{ opacity: 0, y: 20 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.5, delay: item.id * 0.1 }} 
+            viewport={{ once: false }} 
           >
             <iframe
               src={item.src}
@@ -66,9 +89,9 @@ const Media = () => {
               allowFullScreen
             ></iframe>
             <div className="absolute inset-0 transition-opacity duration-300 bg-black opacity-0 group-hover:opacity-40"></div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import tedx from './tedxannouncement.png';
 import group from './group.JPG';
-
+import group1 from '../Gallery/GalleryImages/IMG_5217.webp'
 const Announcements = [
   { id: 1, src: tedx },
-  { id: 2, src: tedx },
+  { id: 2, src: group1 },
   { id: 3, src: group },
 ];
 
@@ -37,6 +37,7 @@ const Carousel = () => {
 
   return (
     <div className="flex flex-col items-center carousel-container">
+      
       <div className="flex justify-center w-full overflow-hidden carousel-image-container">
         <img
           src={Announcements[currentIndex].src}

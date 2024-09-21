@@ -1,39 +1,81 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import PastSeasons from './components/pages/PastSeasons';
-import Gallery from './components/pages/Gallery';
-import Team from './components/pages/Team';
-import Speakers from './components/pages/Speakers';
-import About from './components/pages/About';
-import Home from './components/pages/Home';
 import Navbar from './components/Navbar';
 import Footer from './components/pages/Footer';
+import Loading from './components/Loading';
 
+
+const LazyHome = React.lazy(() => import('./components/pages/Home'));
+const LazyAbout = React.lazy(() => import('./components/pages/About'));
+const LazySpeakers = React.lazy(() => import('./components/pages/Speakers'));
+const LazyTeam = React.lazy(() => import('./components/pages/Team'));
+const LazyGallery = React.lazy(() => import('./components/pages/Gallery'));
+const LazyPastSeasons = React.lazy(() => import('./components/pages/PastSeasons'));
 
 const App = () => {
   return (
-    
-      
     <Router>
-      <div >
-       
-        <Navbar/>
-        
-        
-      <Routes>
-        
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/speakers" element={<Speakers />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="#" element={<PastSeasons />} />
-      </Routes>
+      <div>
+        <Navbar />
 
-      <Footer/>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Suspense fallback={<Loading />}>
+                <LazyHome />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <Suspense fallback={<Loading />}>
+                <LazyAbout />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/speakers"
+            element={
+              <Suspense fallback={<Loading />}>
+                <LazySpeakers />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/team"
+            element={
+              <Suspense fallback={<Loading />}>
+                <LazyTeam />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/gallery"
+            element={
+              <Suspense fallback={<Loading />}>
+                <LazyGallery />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/pastseasons"
+            element={
+              <Suspense fallback={<Loading />}>
+                <LazyPastSeasons />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/loading"
+            element={<Loading />}
+          />
+        </Routes>
+
+        <Footer />
       </div>
     </Router>
-    
   );
 };
 

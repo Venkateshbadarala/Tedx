@@ -3,9 +3,9 @@
 // Chairman, Director, Principal, Vice Principal
 
 import chairman from '../../assets/images/teamphotos/Vishnuraju.png'
-import director from '../../assets/images/teamphotos/Director.png'
+// import director from '../../assets/images/teamphotos/Director.png'
 //import principal from '../../assets/images/teamphotos/principal.png'
-//import viceprincipal from '../../assets/images/teamphotos/viceprincipal.png'
+import viceprincipal from '../../assets/images/teamphotos/Viceprinciple.png'
 
 //Organizer, Co-organizer, Curator
 import suraj from '../../assets/images/teamphotos/suraj.png'
@@ -14,7 +14,7 @@ import akash from '../../assets/images/teamphotos/Akash.png'
 
 // Web Dev team
 
-//import  from '../../assets/images/teamphotos/'
+import venkatesh from '../../assets/images/teamphotos/Venkatesh.png'
 import farhana from '../../assets/images/teamphotos/Farhana.png'
 import bhavani from '../../assets/images/teamphotos/bhavani.png'
 
@@ -39,6 +39,7 @@ import yashwanth from '../../assets/images/teamphotos/yashwanth.png'
 import harsha from '../../assets/images/teamphotos/harsha.png'
 import vamsi from '../../assets/images/teamphotos/Vamsi.png'
 import vivek from '../../assets/images/teamphotos/Vivek.png'
+import srinivas from '../../assets/images/teamphotos/srinivas.png'
 //import  from '../../assets/images/teamphotos/'
 
 //Marketing and Operations
@@ -58,9 +59,9 @@ export const teamCategories = {
       { name: "SHRI K. V. VISHNU RAJU", role: "Chairman - Sri Vishnu Educational Society", image: chairman
         ,LinkedInLink:"",InstagramLink:"",MailLink:""
        },
-      { name: "DR. D. SURYANARAYANA", role: "Director - Vishnu Institute of Technology", image: director,LinkedInLink:"",InstagramLink:"",MailLink:"" },
+      
       //{ name: "DR. M. VENU", role: "Principal - Vishnu Institute of Technology", image: principal,LinkedInLink:"",InstagramLink:"",MailLink:"" },
-      //{ name: "MRS. M. SRILAKSHMI", role: "Vice Principal - Vishnu Institute of Technology", image: viceprincipal,LinkedInLink:"",InstagramLink:"",MailLink:"" },
+      { name: "MRS. M. SRILAKSHMI", role: "Vice Principal - Vishnu Institute of Technology", image: viceprincipal,LinkedInLink:"",InstagramLink:"",MailLink:"" },
     ],
     "ORGANIZING COMMITEE": [
       { name: "MR. SURAJ LANKEY", role: "ORGANIZER", image: suraj,LinkedInLink:"https://www.linkedin.com/in/lankeylaxmisrisuraj/",InstagramLink:"https://www.instagram.com/surajlankey/",MailLink:"21pa1a1263@vishnu.edu.in" },
@@ -68,7 +69,7 @@ export const teamCategories = {
       { name: "MR. AKASH MALLAREDDY", role: "CURATOR", image: akash,LinkedInLink:"",InstagramLink:"",MailLink:"" },
     ],
     "WEB DEVELOPMENT TEAM": [
-      //{ name: "MR. VENKATESH BADARALA", role: "LEAD", image: venkatesh,LinkedInLink:"",InstagramLink:"",MailLink:"" },
+      { name: "MR. VENKATESH BADARALA", role: "LEAD", image: venkatesh,LinkedInLink:"https://www.linkedin.com/in/badarala-venkatesh-4b48b923a/",InstagramLink:"https://www.instagram.com/venkatesh_badarala_/",MailLink:"21pa1a1206@vishnu.edu.in" },
       { name: "MS. FARHANA", role: "CO-LEAD", image: farhana,LinkedInLink:"",InstagramLink:"",MailLink:"" },
       { name: "MS. BHAVANI DEVARAPUDI", role: "VOLUNTEER", image: bhavani,LinkedInLink:"",InstagramLink:"",MailLink:"" },
       
@@ -92,6 +93,7 @@ export const teamCategories = {
         { name: "MS. BHUVANA SRI ADDALA", role: "VOLUNTEER", image: bhuvana,LinkedInLink:"",InstagramLink:"",MailLink:"" },
         { name: "MR. YASHWANTH KRISHNA", role: "VOLUNTEER", image: yashwanth ,LinkedInLink:"",InstagramLink:"",MailLink:""},
         { name: "MR. VIVEK SADHU", role: "VOLUNTEER", image: vivek,LinkedInLink:"",InstagramLink:"",MailLink:"" },
+        { name: "MR. SRINIVAS", role: "VOLUNTEER", image: srinivas,LinkedInLink:"https://www.linkedin.com/in/srinivas-vasam-89a45a280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",InstagramLink:"https://www.instagram.com/srinivas_naidu_vasam?igsh=ZHQwdnc1cmc3NWE5",MailLink:"srinivasvasam15@gmail.com" },
     ],
     "MARKETING & OPERATIONS TEAM": [
         { name: "MR. MANIKANTA THOTA", role: "LEAD", image: manikanta,LinkedInLink:"",InstagramLink:"",MailLink:"" },

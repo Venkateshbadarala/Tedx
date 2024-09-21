@@ -1,8 +1,10 @@
 import React from 'react'
-
+import SpeakerSection from '../speakers/SpeakerSection'
 const Speakers = () => {
   return (
-    <div>Speakers</div>
+    <div>
+      <SpeakerSection/>
+    </div>
   )
 }
 

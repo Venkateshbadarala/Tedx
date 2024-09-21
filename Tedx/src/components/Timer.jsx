@@ -26,7 +26,7 @@ export default function Timer() {
   const days = Math.ceil(remainingTime / daySeconds);
   const daysDuration = days * daySeconds;
 
-  // Define sizes for different screen sizes
+
   const timerProps = {
     isPlaying: true,
     size: 120, 
