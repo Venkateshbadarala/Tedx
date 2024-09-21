@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 
 const corsOptions = {
-  origin: 'http://localhost:3000', // URL of your React app
+  origin: 'https://tedx-5dhn.vercel.app/', // URL of your React app
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 };
