@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 
 const corsOptions = {
-  origin: 'https://tedx-5dhn.vercel.app/', // URL of your React app
+  origin: 'http://localhost:3000', 
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 };
@@ -25,11 +25,11 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.use(express.static(path.join(__dirname, '../tedx/build')));
+app.use(express.static(path.join(__dirname, '../Tedx/build')));
 
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../tedx/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../Tedx/build', 'index.html'));
 });
 
 
