@@ -56,15 +56,15 @@ const Feedback = () => {
           </button>
 
           {isModalOpen && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-75">
-              <div className="relative flex flex-col justify-center p-6 bg-black rounded shadow-lg w-80">
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 shadow-complex">
+              <div className="relative flex flex-col justify-center p-6 bg-black rounded-[10px] sm:w-[23rem] lg:w-[26rem] x-sm:w-[20rem]  shadow-complex">
                 <button
                   onClick={() => setIsModalOpen(false)}
                   className="absolute text-gray-500 top-2 right-2 hover:text-gray-700"
                 >
                   <IoClose className="w-6 h-6" />
                 </button>
-                <h3 className="text-[1rem] font-bold text-red-600 mb-4 border-b text-center ">Queries</h3>
+                <h3 className="text-[1.5rem] font-bold text-red-600 mb-4 border-b text-center pb-3 ">Queries</h3>
                 <form onSubmit={handleSubmit} className="flex flex-col ">
                   <div className="mt-2 wave-group">
                     <input

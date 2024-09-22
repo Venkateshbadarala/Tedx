@@ -38,7 +38,7 @@ const Carousel = () => {
   return (
     <div className="flex flex-col items-center carousel-container">
       
-      <div className="flex justify-center w-full overflow-hidden carousel-image-container">
+      <div className="flex justify-center w-full overflow-hidden carousel-image-container ">
         <img
           src={Announcements[currentIndex].src}
           alt={`Announcement ${currentIndex + 1}`}

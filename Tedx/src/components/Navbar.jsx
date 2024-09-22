@@ -120,7 +120,7 @@ const Navbar = () => {
                     {isEditionsOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
                   </button>
                   {isEditionsOpen && (
-                    <div className="absolute z-10 flex flex-col p-3 mt-2 bg-white text-[15px] text-black w-[15rem] shadow-lg top-[1rem] left-1/2 transform -translate-x-1/2 rounded-[10px]">
+                    <div className="absolute z-10 flex flex-col p-1 mt-3 bg-white text-[15px] text-black w-[9rem] shadow-lg top-[1rem] left-1/2 transform -translate-x-1/2 rounded-[10px]">
                       {Editions.map((season, idx) => (
                         <Link
                           key={idx}

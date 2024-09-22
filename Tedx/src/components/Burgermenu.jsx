@@ -2,15 +2,47 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { RxHamburgerMenu, RxCross2 } from 'react-icons/rx';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
+import {  FaHome } from 'react-icons/fa'; 
+import { RiTeamFill } from "react-icons/ri";
+import { HiMiniInformationCircle } from "react-icons/hi2";
+import { IoLocation } from "react-icons/io5";
+import { RiGalleryView2 } from "react-icons/ri";
+import logo from '../assets/images/home/logo.jpg';
+import { FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { IoIosMicrophone } from "react-icons/io";
+import { GrChapterAdd } from "react-icons/gr";
+const iconMap = {
+  Home: <FaHome className="mr-2" />,
+  Speakers: <IoIosMicrophone className="mr-2" />,
+  Editions: <GrChapterAdd className="mr-2" />,
+  Team: <RiTeamFill  className="mr-2"/>,
+  About: <HiMiniInformationCircle className="mr-2" />,
+  Venue:<IoLocation className="mr-2" />,
+  Gallery:<RiGalleryView2 className="mr-2" />
+};
 
-// Define the Burgermenu component
+const socailmedia = [
+  {
+    link: "",
+    icon: <FaTwitter className='w-5 h-5' />
+  },
+  {
+    link: "",
+    icon: <FaInstagram className='w-5 h-5' />
+  },
+  {
+    link: "",
+    icon: <FaLinkedinIn className='w-5 h-5' />
+  },
+]
+
 const Burgermenu = ({ header, Editions }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isEditionsOpen, setIsEditionsOpen] = useState(false);
 
   return (
     <div>
-      <div className="p-4 lg:hidden ">
+      <div className="p-4 lg:hidden">
         <button
           className="text-2xl text-white focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -19,9 +51,9 @@ const Burgermenu = ({ header, Editions }) => {
         </button>
       </div>
       <div
-        className={`fixed inset-0 z-20 flex flex-col p-5 text-white bg-black bg-opacity-95 transition-transform transform ${
+        className={`fixed inset-0 z-20 flex flex-col space-y-12 items-center p-5 text-white bg-black transition-transform transform shadow-new-shadow rounded-r-[30px] w-[16rem] ${
           isMenuOpen ? 'translate-x-0' : '-translate-x-full'
-        } md:hidden max-w-xs`}
+        } md:hidden`}
       >
         <div className="absolute top-0 right-0 p-5">
           <button
@@ -31,47 +63,62 @@ const Burgermenu = ({ header, Editions }) => {
             <RxCross2 />
           </button>
         </div>
-        <div className="mt-8 space-y-4">
+        <div>
+          <img src={logo} alt="pic1" />
+        </div>
+        <div className="flex flex-col space-y-3 ">
           {header.map((item, index) => (
-            <div key={index} className="py-2 border-b border-gray-700">
-              <div className="flex items-center justify-between">
+            <div key={index} className="flex flex-col pt-2">
+              <div className="flex items-center justify-between w-[190px] p-2 transition-transform transform hover:scale-105  hover:bg-slate-950 text-white rounded-lg     bg-inherit shadow-custom">
                 <Link
                   to={item.link}
-                  className="text-lg font-semibold text-white hover:text-gray-300"
+                  className="flex items-center justify-center text-lg font-semibold text-center text-white hover:text-white"
                   onClick={() => setIsMenuOpen(false)}
                 >
+                  {/* Render the icon based on the item name */}
+                  {iconMap[item.name] || null}
                   {item.name}
                 </Link>
                 {item.name === 'Editions' && (
                   <button
                     onClick={() => setIsEditionsOpen(!isEditionsOpen)}
-                    className="ml-2 text-lg text-white focus:outline-none"
+                    className="text-lg text-white ml- focus:outline-none"
                   >
                     {isEditionsOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
                   </button>
                 )}
               </div>
-              {item.name === "Editions" && (
-                <div
-                  className={`transition-max-height duration-500 ease-in-out overflow-hidden ${isEditionsOpen ? 'max-h-screen' : 'max-h-0'}`}
-                >
-                  <div className="flex flex-col gap-4 pt-5 pl-5">
-                    {Editions.map((entry, idx) => (
-                      <Link
-                        key={idx}
-                        to={entry.link}
-                        className="text-sm text-gray-300 hover:text-white"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {entry.name}
-                      </Link>
-                    ))}
-                  </div>
+              {item.name === "Editions" && isEditionsOpen && (
+                <div className="flex flex-col gap-4 pt-2 pl-5">
+                  {Editions.map((entry, idx) => (
+                    <Link
+                      key={idx}
+                      to={entry.link}
+                      className="text-sm text-gray-300 transition duration-200 hover:text-white"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {entry.name}
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>
           ))}
         </div>
+        <div className="fixed flex flex-col mr-8 bottom-9 x-sm:mt-2">
+            <h3 className="pb-1 mb-2 sm:text-xl font-bold text-red-600 border-b x-sm:text-[18px]">Follow Us</h3>
+            <div className="flex mt-4 x-sm:items-center x-sm:justify-start sm:space-x-5 x-sm:flex-row sm:flex-row x-sm:gap-4 sm:justify-start">
+              {
+                socailmedia.map((item, index) => (
+                  <div key={index}>
+                    <Link href={item.link} className='hover:text-red-600'>
+                      <p>{item.icon}</p>
+                    </Link>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
       </div>
       {isMenuOpen && (
         <div
