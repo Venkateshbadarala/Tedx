@@ -25,12 +25,10 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.use(express.static(path.join(__dirname, 'build')));
-
-
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.send('Backend is deployed and running correctly!');
 });
+
 
 
 app.post('/send-email', (req, res) => {
