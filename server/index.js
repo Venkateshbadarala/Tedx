@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 
 const corsOptions = {
-  origin: 'https://tedx-5dhn.vercel.app/', 
+  origin: '*', // Ensure this matches your Vercel app URL without the trailing slash
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 };
