@@ -5,7 +5,7 @@ import speaker2 from '../../assets/images/speakerImage/speaker2.png';
 
 export const speakers = [
   {
-    name: '...............................',
+    name: 'Revealing Soon',
     role: '>>>>>>>>>>>>>',
     image: speaker1,
     LinkedInLink: '',
@@ -13,7 +13,7 @@ export const speakers = [
     MailLink: '',
   },
   {
-    name: '..............................',
+    name: 'Revealing Soon',
     role: '>>>>>>>>>>>>>',
     image: speaker2,
     LinkedInLink: '',
@@ -21,7 +21,7 @@ export const speakers = [
     MailLink: '',
   },
   {
-    name: '...............................',
+    name: 'Revealing Soon',
     role: '>>>>>>>>>>>>>',
     image: speaker1,
     LinkedInLink: '',
@@ -29,7 +29,7 @@ export const speakers = [
     MailLink: '',
   },
   {
-    name: '..............................',
+    name: 'Revealing Soon',
     role: '>>>>>>>>>>>>>',
     image: speaker2,
     LinkedInLink: '',
@@ -37,7 +37,7 @@ export const speakers = [
     MailLink: '',
   },
   {
-    name: '...............................',
+    name: 'Revealing Soon',
     role: '>>>>>>>>>>>>>',
     image: speaker1,
     LinkedInLink: '',
@@ -45,7 +45,7 @@ export const speakers = [
     MailLink: '',
   },
   {
-    name: '..............................',
+    name: 'Revealing Soon',
     role: '>>>>>>>>>>>>>',
     image: speaker2,
     LinkedInLink: '',
