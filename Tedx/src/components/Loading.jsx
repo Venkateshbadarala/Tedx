@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Xloading from './Xloading.png'; // Path to your X image
+import Xloading from './Xloading.webp';
 
 const XLoadingAnimation = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -9,23 +9,21 @@ const XLoadingAnimation = () => {
     const handleOnline = () => setIsOffline(false);
     const handleOffline = () => setIsOffline(true);
 
-    
+
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
 
-    
     const handleLoad = () => {
       setIsLoading(false);
     };
 
     window.addEventListener('load', handleLoad);
 
-   
+  
     const loadingTimeout = setTimeout(() => {
       setIsLoading(false);
-    }, 5000); 
+    }, 5000);
 
-    
     return () => {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
@@ -38,7 +36,14 @@ const XLoadingAnimation = () => {
     <div className="flex items-center justify-center h-screen bg-black bg-opacity-60 backdrop-blur-sm">
       {isLoading && (
         <div className="circle">
-          <img src={Xloading} alt="X Shape" className="x-image" />
+        
+          <img
+            src={Xloading}
+            alt="X Shape"
+            className="x-image"
+            loading="lazy"
+            decoding="async"
+          />
           <div className="water">
             <div className="wave wave1"></div>
             <div className="wave wave2"></div>

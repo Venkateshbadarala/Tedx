@@ -55,9 +55,9 @@ const Content = () => {
               drag={!isTouchDevice ? "y" : false} 
               dragConstraints={{ top: -100, bottom: 100 }}
             >
-              <div className='flex flex-col items-center justify-center mt-[100vh] mb-[90vh] rounded-[20px]'>
-                <h2 className='text-red-600 border-b sm:text-5xl x-sm:text-3xl'>{item.title}</h2>
-                <h3 className='px-[10vw] pt-8 sm:text-xl font-light x-sm:text-[14px]'>
+              <div className='flex flex-col items-center justify-center  rounded-[20px]'>
+                <h2 className='text-red-600 border-b sm:text-5xl x-sm:text-2xl'>{item.title}</h2>
+                <h3 className='px-[10vw] pt-8 sm:text-xl font-light x-sm:text-[14px] text-justify'>
                   {item.subtitle}
                 </h3>
               </div>
