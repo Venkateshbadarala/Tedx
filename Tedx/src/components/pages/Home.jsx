@@ -23,7 +23,7 @@ const Home = () => {
   const planet3Y = useTransform(scrollYProgress, [0, 8], ['0%', '2000%']);
   const scroll1 = useTransform(scrollYProgress, [0, 0.5, 0.8], [1, 0.2, 1]);
   const textScrollY = useTransform(scrollYProgress, [0, 0.5, 1], [50, 10, -50]); 
-  const textOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0, 1]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.7, 1], [0, 2, 1]);
 
 
 
@@ -47,7 +47,7 @@ const Home = () => {
             <p className="z-30 x-sm:hidden sm:flex">Cosmic connections</p>
             <div>
               <p className="z-30 sm:hidden">Cosmic</p>
-              <p className="z-30 -mt-10 sm:hidden">connections</p>
+              <p className="z-30 -mt-10 sm:hidden x-sm:text-[4.6rem]">connections</p>
             </div>
           </motion.h1>
           <motion.h1
@@ -118,7 +118,7 @@ const Home = () => {
           style={{
             opacity:scroll1
           }}
-          className="md:text-[15rem] absolute md:-mt-64 z-20 opacity-80 shadow-xl asteriod x-sm:text-[6rem] x-sm:-mt-36 sm:text-[9rem]">
+          className="md:text-[15rem] absolute md:-mt-64 z-20 opacity-80 shadow-xl asteriod x-sm:text-[5.2rem] x-sm:-mt-36 sm:text-[9rem] ">
             countdown
           </motion.p>
           <div className="relative">
@@ -141,7 +141,7 @@ const Home = () => {
   className="md:text-[4rem] font-extrabold x-sm:text-[2rem] sm:text-[3rem] "
   style={{ opacity: textOpacity, y: textScrollY }}
 >
-  24th February, 2025
+  22th February, 2025
 </motion.h1>
 <motion.p
   className="md:text-[20px] text-red-600 montserrat tracking-widest uppercase x-sm:text-[15px] sm:text-[20px]"
@@ -160,7 +160,7 @@ const Home = () => {
           backgroundSize: 'cover',
         }}
       >
-        <h1 className="md:text-[7rem] font-extrabold asteriod x-sm:text-[4rem] sm:text-[6rem]">Announcements</h1>
+        <h1 className="md:text-[7rem] font-extrabold asteriod x-sm:text-[3.8rem] sm:text-[6rem]">Announcements</h1>
         <PricingCards />
         <div>
           <Announce />

@@ -1,22 +1,19 @@
 import React from 'react';
-import { FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { TfiEmail } from "react-icons/tfi";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { IoLocationOutline } from "react-icons/io5";
 import { LuPhoneCall } from "react-icons/lu";
 import Feedback from '../FeedbackModal/Feedback';
 
 const socailmedia = [
+
   {
-    link: "",
-    icon: <FaTwitter className='w-5 h-5' />
-  },
-  {
-    link: "",
+    link: "https://www.instagram.com/tedxvishnuinstitute?igsh=ZHN3NmU2YzV0OHdn",
     icon: <FaInstagram className='w-5 h-5' />
   },
   {
-    link: "",
+    link: "https://www.linkedin.com/company/tedxvishnuinstitute/",
     icon: <FaLinkedinIn className='w-5 h-5' />
   },
 ]
@@ -38,8 +35,8 @@ const contact = [
 
 const Footer = () => {
   return (
-    <footer className="w-full py-4 text-white" id='footer'>
-      <div className="flex flex-wrap justify-center gap-14">
+    <footer className="w-full py-4 text-white " id='footer'>
+      <div className="flex flex-wrap justify-center gap-14 x-sm:pt-[12%] sm:pt-0">
         <div className='flex flex-col gap-16 x-sm:flex-col x-sm:gap-5 sm:flex-col'>
           <div className="flex flex-col gap-2 w-[20rem]">
             <h3 className="pb-1 font-bold text-red-600 border-b sm:text-xl x-sm:text-[18px]">Contact Info</h3>
@@ -67,9 +64,9 @@ const Footer = () => {
               {
                 socailmedia.map((item, index) => (
                   <div key={index}>
-                    <Link href={item.link} className='hover:text-red-600'>
+                    <a href={item.link} className='hover:text-red-600'>
                       <p>{item.icon}</p>
-                    </Link>
+                    </a>
                   </div>
                 ))
               }

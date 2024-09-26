@@ -39,6 +39,7 @@ const Content = () => {
 
   return (
     <main>
+     
       <motion.div
         ref={container}
         className='flex flex-col items-center justify-center space-y-20 text-white'
@@ -65,6 +66,7 @@ const Content = () => {
           ))}
         </div>
       </motion.div>
+      
     </main>
   );
 };
