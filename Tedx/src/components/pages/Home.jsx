@@ -141,7 +141,7 @@ const Home = () => {
   className="md:text-[4rem] font-extrabold x-sm:text-[2rem] sm:text-[3rem] "
   style={{ opacity: textOpacity, y: textScrollY }}
 >
-  22th February, 2025
+  22nd February, 2025
 </motion.h1>
 <motion.p
   className="md:text-[20px] text-red-600 montserrat tracking-widest uppercase x-sm:text-[15px] sm:text-[20px]"
