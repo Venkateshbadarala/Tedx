@@ -41,7 +41,7 @@ const Navbar = () => {
     { name: 'Editions', link: '#' },
   ];
 
-  const Editions = [{ name: 'Season 1', link: 'https://venkateshbadarala.github.io/Old_Tedx/' }];
+  const Editions = [{ name: 'Season 1', link: 'https://tedxvishnuinstitute.vercel.app/' }];
 
   const scrollToFooter = () => {
     const footerElement = document.getElementById('footer');
