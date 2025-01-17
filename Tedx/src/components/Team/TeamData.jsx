@@ -24,13 +24,13 @@ import dhanush from '../../assets/images/teamphotos/dhanush.png'
 import divya  from '../../assets/images/teamphotos/divya.png'
 import vineeth from '../../assets/images/teamphotos/vineeth.png'
 import sahitha from '../../assets/images/teamphotos/sahitha.png'
-import bhavana from '../../assets/images/teamphotos/bhavana.png'
+import bhavana from '../../assets/images/teamphotos/bhavana.jpg'
 import satvika from '../../assets/images/teamphotos/sathvika.png'
 
 
 //Hospitality Team
 
-import raghavendra from '../../assets/images/teamphotos/raghavendra.png'
+import raghavendra from '../../assets/images/teamphotos/raghavendra.jpg'
 import yasmin from '../../assets/images/teamphotos/Yasmin.png'
 import manasa from '../../assets/images/teamphotos/Manasa.png'
 import bhuvana from '../../assets/images/teamphotos/bhuvana.png'
@@ -44,7 +44,7 @@ import srinivas from '../../assets/images/teamphotos/srinivas.png'
 
 //Marketing and Operations
 
-import manikanta from '../../assets/images/teamphotos/manikanta.png'
+import manikanta from '../../assets/images/teamphotos/manikanta.jpg'
 import priyanka from '../../assets/images/teamphotos/Priyanka.png'
 import subhash from '../../assets/images/teamphotos/subhash.png'
 import dinesh from '../../assets/images/teamphotos/Dinesh.png'
