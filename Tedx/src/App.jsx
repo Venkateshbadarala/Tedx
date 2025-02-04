@@ -1,32 +1,54 @@
-import React, { Suspense, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/pages/Footer';
-import Loading from './components/Loading';
+import React, { Suspense, useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/pages/Footer";
+import Loading from "./components/Loading";
 
-const LazyHome = React.lazy(() => import('./components/pages/Home'));
-const LazyAbout = React.lazy(() => import('./components/pages/About'));
-const LazySpeakers = React.lazy(() => import('./components/pages/Speakers'));
-const LazyTeam = React.lazy(() => import('./components/pages/Team'));
-const LazyGallery = React.lazy(() => import('./components/pages/Gallery'));
-const LazyPastSeasons = React.lazy(() => import('./components/pages/PastSeasons'));
+// Lazy-loaded pages
+const LazyHome = React.lazy(() => import("./components/pages/Home"));
+const LazyAbout = React.lazy(() => import("./components/pages/About"));
+const LazySpeakers = React.lazy(() => import("./components/pages/Speakers"));
+const LazyTeam = React.lazy(() => import("./components/pages/Team"));
+const LazyGallery = React.lazy(() => import("./components/pages/Gallery"));
+const LazyPastSeasons = React.lazy(() => import("./components/pages/PastSeasons"));
 
+// Scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
   return null;
 };
 
 const App = () => {
+  const [isOffline, setIsOffline] = useState(false);
+
+  useEffect(() => {
+    // Listen for network status changes
+    const handleOffline = () => setIsOffline(true);
+    const handleOnline = () => setIsOffline(false);
+
+    window.addEventListener("offline", handleOffline);
+    window.addEventListener("online", handleOnline);
+
+    return () => {
+      window.removeEventListener("offline", handleOffline);
+      window.removeEventListener("online", handleOnline);
+    };
+  }, []);
+
   return (
     <Router>
       <ScrollToTop />
       <div>
         <Navbar />
+
+        {isOffline && (
+          <div className="py-2 text-center text-white bg-red-500">
+            You are offline. Some features may not work!
+          </div>
+        )}
 
         <Suspense fallback={<Loading />}>
           <Routes>

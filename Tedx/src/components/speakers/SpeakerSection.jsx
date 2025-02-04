@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { speakers } from './SpeakerData';
 import { TeamCards } from '../Team/TeamCards';
+import { SpeakersCard } from './SpeakersCard';
 
 const TeamSection = () => {
   const containerRef = useRef(null);
@@ -26,7 +27,7 @@ const TeamSection = () => {
 
         <div className="grid grid-cols-3 gap-10 sm:grid-cols-2 lg:grid-cols-3 x-sm:grid-cols-1">
           {speakers.map((speaker, index) => (
-            <TeamCards
+            <SpeakersCard
               key={index}
               name={speaker.name}
               role={speaker.role}
@@ -34,6 +35,7 @@ const TeamSection = () => {
               LinkedInLink={speaker.LinkedInLink || '#'}
               MailLink={speaker.MailLink || '#'}
               InstagramLink={speaker.InstagramLink || '#'}
+              description={speaker.description || " "}
             />
           ))}
         </div>
