@@ -130,11 +130,15 @@ body {
     margin-top: 15px;
     padding: 10px 5px;
   }
+
+  .card .bottom-section {
+    margin-top: 15px;
+    padding: 10px 5px;
+  }
   
   .card .bottom-section .title {
-    
     display: block;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bolder;
     color: red;
     text-align: center;

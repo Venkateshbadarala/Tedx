@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import logo from "./logo.jpg";
-import { IoClose, IoMailOutline } from "react-icons/io5";
+import { IoMailOutline, IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
+import { Modal, Box } from "@mui/material";
+import logo from "./logo.jpg";
 
 export const SpeakersCard = ({
   name,
@@ -15,23 +16,8 @@ export const SpeakersCard = ({
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  useEffect(() => {
-    const handleTouchMove = (e) => {
-      if (isModalOpen) {
-        setIsModalOpen(false);
-      }
-    };
-
-    if (isModalOpen) {
-      window.addEventListener("touchmove", handleTouchMove);
-    } else {
-      window.removeEventListener("touchmove", handleTouchMove);
-    }
-
-    return () => {
-      window.removeEventListener("touchmove", handleTouchMove);
-    };
-  }, [isModalOpen]);
+  const handleModalOpen = () => setIsModalOpen(true);
+  const handleModalClose = () => setIsModalOpen(false);
 
   return (
     <>
@@ -85,21 +71,31 @@ export const SpeakersCard = ({
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center bottom-section">
-            <div className="text-[2.5rem] font-bold text-red-600 title md:text-2xl">
+          <div className="flex flex-col items-center justify-center py-2">
+            <div
+              className="text-[2rem] font-bold text-red-600 tracking-wide md:text-base text-center"
+              style={{
+                fontSize: "17.5px",
+              }}
+            >
               {name}
             </div>
             <div className="text-sm text-center text-white md:text-base">
               {role}
             </div>
-            <div className="text-sm font-normal text-center text-white line-clamp-2 md:text-base">
+
+            <div className="text-[10px] font-thin text-white line-clamp-2 md:text-base">
               {description}
             </div>
 
-            {description.length > 100 && (
+            {description.length > 200 && (
               <button
-                className="px-3 py-1 mt-2 text-sm text-red-600 rounded-md md:text-base hover:text-red-700"
-                onClick={() => setIsModalOpen(true)}
+                className="text-[10px] text-red-600 rounded-md md:text-base hover:text-red-700"
+                onClick={handleModalOpen}
+                style={{
+                  fontSize: "12px",
+                  marginLeft: "200px",
+                }}
               >
                 Show More
               </button>
@@ -108,40 +104,88 @@ export const SpeakersCard = ({
         </div>
       </motion.div>
 
-      {isModalOpen && (
-        <div
-          className="fixed inset-0 z-10 flex items-center justify-center min-h-screen p-4 bg-black bg-opacity-50"
-          onClick={() => setIsModalOpen(false)}
+      <Modal
+  open={isModalOpen}
+  onClose={handleModalClose}
+  aria-labelledby="speaker-modal-title"
+  aria-describedby="speaker-modal-description"
+>
+  <Box
+    sx={{
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      width: {
+        xs: "90%",  // Small screens: 90% width
+        sm: "80%",  // Medium screens: 80% width
+        md: "60%",  // Large screens: 60% width
+      },
+      maxWidth: "900px",
+      bgcolor: "black",
+      color: "white",
+      border: "2px solid #ff0000",
+      boxShadow: 24,
+      p: 2,
+      borderRadius: "8px",
+      outline: "none",
+      maxHeight: {
+        xs: "90vh", // Small screens: Allow more height
+        md: "80vh", // Medium+ screens: Fixed height
+      },
+      overflow: "hidden", // Prevent modal overflow
+    }}
+  >
+    <div className="flex flex-col items-center gap-4 md:flex-row md:items-start">
+      {/* Image Section */}
+      <div className="w-full md:w-1/3">
+        <img
+          src={image}
+          alt="Speaker"
+          className="object-cover w-full h-auto rounded-lg"
+        />
+      </div>
+
+      {/* Text Section */}
+      <div className="flex flex-col w-full gap-2 text-center md:text-left md:w-2/3">
+        <h1 id="speaker-modal-title" className="text-xl font-bold text-red-600">
+          {name}
+        </h1>
+        <div className="text-base md:text-lg">{role}</div>
+
+        {/* Scrollable Description */}
+        <Box
+          id="speaker-modal-description"
+          sx={{
+            maxHeight: {
+              xs: "30vh",  // Small screens: More height for scrolling
+              md: "40vh",  // Medium+ screens: Moderate height
+            },
+            overflowY: "auto",
+            paddingRight: "8px",
+          }}
         >
-          <div
-            className="flex flex-col w-[90vw] md:w-[60vw] p-6 bg-black rounded-lg gap-6 items-center justify-center relative border border-red-500 md:flex-row"
-            onClick={(e) => e.stopPropagation()}
-            onTouchMove={(e) => e.stopPropagation()}
-          >
-            <div className="w-full md:w-1/2">
-              <img
-                src={image}
-                alt="Speaker"
-                className="w-full h-[25vh] md:h-[32vh] object-cover rounded-lg"
-              />
-            </div>
-            <div className="w-full text-center md:w-1/2 md:text-left">
-              <h2 className="text-xl font-bold text-red-600 md:text-2xl">
-                {name}
-              </h2>
-              <p className="mt-2 text-sm font-normal text-white md:text-base">
-                {description}
-              </p>
-              <button
-                className="absolute p-2 text-white rounded-md top-4 right-4"
-                onClick={() => setIsModalOpen(false)}
-              >
-                <IoClose className="w-6 h-6" />
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+          <p className="text-sm font-thin tracking-wide md:text-base">
+            {description}
+          </p>
+        </Box>
+      </div>
+    </div>
+
+    {/* Close Button */}
+    <button
+      className="absolute text-white top-4 right-4 hover:text-red-500"
+      onClick={handleModalClose}
+    >
+      <IoClose size={24} />
+    </button>
+  </Box>
+</Modal>
+
+
+
+
+
     </>
   );
 };
