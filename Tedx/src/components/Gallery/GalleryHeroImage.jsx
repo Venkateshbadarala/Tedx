@@ -1,5 +1,5 @@
 import React from 'react'
-import pic14 from '../../components/Gallery/GalleryImages/The Organizing Commitee.webp';
+import pic14 from '../../components/Gallery/GalleryImages/The Organizing Commitee.PNG';
 const GalleryHeroImage = () => {
   return (
     <div className='pt-10'>

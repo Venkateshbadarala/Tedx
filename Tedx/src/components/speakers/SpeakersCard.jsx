@@ -48,39 +48,16 @@ export const SpeakersCard = ({
               <div className="logo">
                 <img src={logo} alt="log" className="w-[6.8rem]" />
               </div>
-              <div className="flex space-x-2 social-media">
-                <a
-                  href={`mailto:${MailLink}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-red-600"
-                >
-                  <IoMailOutline size={20} />
-                </a>
-                <a
-                  href={InstagramLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-red-600"
-                >
-                  <FaInstagram size={20} />
-                </a>
-                <a
-                  href={LinkedInLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-red-600"
-                >
-                  <FaLinkedinIn size={20} />
-                </a>
+              <div className="flex space-x-2 font-bold text-white social-media">
+                #SPEAKER
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center py-2">
+          <div className="flex flex-col items-center justify-center gap-1 py-3">
             <div
               className="text-[2rem] font-bold text-red-600 tracking-wide md:text-base text-center"
               style={{
-                fontSize: "17.5px",
+                fontSize: "20px",
               }}
             >
               {name}
@@ -89,18 +66,18 @@ export const SpeakersCard = ({
               {role}
             </div>
 
-            <div className="text-[10px] font-thin text-white line-clamp-2 md:text-base inline-block relative">
+            <div className="text-[10px] font-thin text-white line-clamp-2 md:text-base inline-block relative text-justify ">
               {description.length > 200 ? (
-                <>
-                  {description.slice(0, 100)}...
+                <div className="flex flex-col items-start gap-2">
+                  {description.slice(0, 115)}...
                   <button
-                    className="text-[20px] text-red-600 font-semibold rounded-md md:text-base hover:text-red-700 inline"
+                    className="text-[20px] text-red-600 font-medium rounded-md md:text-base hover:text-red-700 inline hover:underline border p-1 px-3 ml-[1rem] border-red-600"
                     onClick={handleModalOpen}
                     style={{ fontSize: "15px" }}
                   >
-                    Show More
+                    show more
                   </button>
-                </>
+                </div>
               ) : (
                 description
               )}
@@ -173,7 +150,7 @@ export const SpeakersCard = ({
                   paddingRight: "8px",
                 }}
               >
-                <p className="text-sm font-thin tracking-wide md:text-base">
+                <p className="text-sm font-thin text-justify md:text-base">
                   {description}
                 </p>
               </Box>

@@ -138,7 +138,7 @@ const Navbar = () => {
           ))}
         </div>
         <div className="bg-red-600 p-2 rounded-[5px] x-sm:text-[9px] sm:text-[1rem]">
-          <h1>Buy Tickets</h1>
+          <h1>Register Now</h1>
         </div>
         <div className="left-0 lg:hidden">
           <Burgermenu header={header} Editions={Editions} />
