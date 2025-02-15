@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { IoMailOutline, IoClose } from "react-icons/io5";
+import {  IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { Modal, Box } from "@mui/material";
 import logo from "./logo.jpg";
@@ -8,18 +7,14 @@ import logo from "./logo.jpg";
 export const SpeakersCard = ({
   name,
   image,
-  MailLink,
-  InstagramLink,
-  LinkedInLink,
+  
   role,
   description,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
 
-  const toggleExpand = () => {
-    setIsExpanded(!isExpanded);
-  };
+
+ 
 
   const handleModalOpen = () => setIsModalOpen(true);
   const handleModalClose = () => setIsModalOpen(false);
@@ -68,12 +63,14 @@ export const SpeakersCard = ({
 
             <div className="text-[10px] font-thin text-white line-clamp-2 md:text-base inline-block relative text-justify ">
               {description.length > 200 ? (
-                <div className="flex flex-col items-start gap-2">
+                <div className="flex flex-col items-center gap-2">
                   {description.slice(0, 115)}...
                   <button
-                    className="text-[20px] text-red-600 font-medium rounded-md md:text-base hover:text-red-700 inline hover:underline border p-1 px-3 ml-[1rem] border-red-600"
+                  className="text-[5px] text-red-600 font-normal rounded-md md:text-base hover:text-red-700 inline hover:underline border-red-600 "
                     onClick={handleModalOpen}
-                    style={{ fontSize: "15px" }}
+                    style={{
+                      fontSize: "15px",
+                    }}
                   >
                     show more
                   </button>

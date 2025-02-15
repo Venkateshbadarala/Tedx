@@ -19,7 +19,7 @@ export const speakers = [
     description: 'Ravi Mantri was born in Andhra Pradesh, South India. He pursued his masters degree from the College of Engineering, JNTU, before moving to Ireland for work. As a techie by profession, Ravi embarked on his literary journey in 2019 with his debut novel, Amma Dairylo Konni Pageelu. The novel became a best-seller and won the hearts of many readers. In addition to novels, Ravi has penned several short stories that have been published in renowned Telugu magazines. An avid social media influencer, he actively creates relatable content for his followers. Ravi is currently working on his second novel.'
   },
   {
-    name: 'Dr. M. K. Abhiramula',
+    name: 'Dr. Moksha',
     role: 'Advocate',
     image: MokshaKalyanram,
     LinkedInLink: '',
@@ -43,7 +43,7 @@ export const speakers = [
     LinkedInLink: '',
     InstagramLink: '',
     MailLink: '',
-    description: 'Galla Madhavi, a dedicated social worker from Mulukuduru village, is committed to public service and community development. With an MCA degree, she initially pursued Civil Services but later found her calling in teaching and philanthropy. She currently serves as the Director of Sri Bhramara Townships Pvt. Ltd. and Vikaas Hospitals, striving to provide affordable housing and quality healthcare.As the co-founder of the Sri Bhramara Trust, she leads initiatives in education, healthcare, and social welfare, focusing on youth empowerment and environmental sustainability. Actively engaged in community service, she organizes free health camps, distributes essential supplies to the needy, and supports employment programs. Through her political campaign, she actively engages with people at the grassroots level, addressing their concerns and working towards their well-being. With her unwavering dedication, she envisions a society where every individual has access to better opportunities and an improved quality of life.'
+    description: 'Galla Madhavi, a dedicated social worker from Mulukuduru village, is committed to public service and community development. With an MCA degree, she initially pursued Civil Services but later found her calling in teaching and philanthropy. She currently serves as the Director of Vikaas Hospitals, striving to provide affordable and quality healthcare. As the co-founder of the Sri Bhramara Trust, she leads initiatives in education, healthcare, and social welfare, focusing on youth empowerment and environmental sustainability. Actively engaged in community service, she organizes free health camps, distributes essential supplies to the needy, and supports employment programs. Through her political campaign, she actively engages with people at the grassroots level, addressing their concerns and working towards their well-being. With her unwavering dedication, she envisions a society where every individual has access to better opportunities and an improved quality of life.'
   },
   {
     name: 'Mr. Bijay Bairagi',
