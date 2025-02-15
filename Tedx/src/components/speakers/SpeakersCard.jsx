@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {  IoClose } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { Modal, Box } from "@mui/material";
 import logo from "./logo.jpg";
@@ -7,14 +7,11 @@ import logo from "./logo.jpg";
 export const SpeakersCard = ({
   name,
   image,
-  
+
   role,
   description,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-
- 
 
   const handleModalOpen = () => setIsModalOpen(true);
   const handleModalClose = () => setIsModalOpen(false);
@@ -62,24 +59,21 @@ export const SpeakersCard = ({
             </div>
 
             <div className="text-[10px] font-thin text-white md:text-base text-justify relative w-full max-w-sm">
-  {description.length > 200 ? (
-    <div className="relative w-full">
-      <p className="text-justify line-clamp-2">{description}</p>
-    
-      <button
-        className="absolute bottom-0 right-0 px-1 font-normal text-red-600 bg-black rounded-md md:text-base hover:text-red-700 hover:underline"
-        onClick={handleModalOpen}
-      >
-      ...Show more
-      </button>
-    </div>
-  ) : (
-    <p className="text-center">{description}</p>
-  )}
-</div>
+              {description.length > 200 ? (
+                <div className="relative w-full">
+                  <p className="text-justify line-clamp-2">{description}</p>
 
-
-
+                  <button
+                    className="absolute bottom-0 right-0 px-1 font-normal text-red-600 bg-black rounded-md md:text-base hover:text-red-700 hover:underline"
+                    onClick={handleModalOpen}
+                  >
+                    ...Show more
+                  </button>
+                </div>
+              ) : (
+                <p className="text-center">{description}</p>
+              )}
+            </div>
           </div>
         </div>
       </motion.div>
