@@ -61,24 +61,25 @@ export const SpeakersCard = ({
               {role}
             </div>
 
-            <div className="text-[10px] font-thin text-white line-clamp-2 md:text-base inline-block relative text-justify ">
-              {description.length > 200 ? (
-                <div className="flex flex-col items-center gap-2">
-                  {description.slice(0, 115)}...
-                  <button
-                  className="text-[5px] text-red-600 font-normal rounded-md md:text-base hover:text-red-700 inline hover:underline border-red-600 "
-                    onClick={handleModalOpen}
-                    style={{
-                      fontSize: "15px",
-                    }}
-                  >
-                    show more
-                  </button>
-                </div>
-              ) : (
-                description
-              )}
-            </div>
+            <div className="text-[10px] font-thin text-white md:text-base text-justify relative w-full max-w-sm">
+  {description.length > 200 ? (
+    <div className="relative w-full">
+      <p className="text-justify line-clamp-2">{description}</p>
+    
+      <button
+        className="absolute bottom-0 right-0 px-1 font-normal text-red-600 bg-black rounded-md md:text-base hover:text-red-700 hover:underline"
+        onClick={handleModalOpen}
+      >
+      ...Show more
+      </button>
+    </div>
+  ) : (
+    <p className="text-center">{description}</p>
+  )}
+</div>
+
+
+
           </div>
         </div>
       </motion.div>
