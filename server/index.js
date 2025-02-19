@@ -1,53 +1,60 @@
-require('dotenv').config();
-const express = require('express');
-const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const path = require('path');
+require("dotenv").config();
+const express = require("express");
+const nodemailer = require("nodemailer");
+const cors = require("cors");
+
 const app = express();
 
 const corsOptions = {
-  origin: '*', // Ensure this matches your Vercel app URL without the trailing slash
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  origin: '*',
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
 };
 
 app.use(cors(corsOptions));
+app.use(express.json());
 
-app.use(bodyParser.json());
+if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+  console.error("Missing EMAIL_USER or EMAIL_PASS in .env file");
+  process.exit(1);
+}
 
-// Configure Nodemailer transport
 const transporter = nodemailer.createTransport({
-  service: 'gmail', // You can use any other email service
+  service: "gmail",
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
   },
 });
 
-app.get('/', (req, res) => {
-  res.send('Backend is deployed and running correctly!');
+transporter.verify((error) => {
+  if (error) console.error("SMTP connection failed:", error);
+  else console.log("SMTP connection established");
 });
 
+app.get("/", (req, res) => {
+  res.json({ message: "Backend is deployed and running correctly!" });
+});
 
-
-app.post('/send-email', (req, res) => {
-  const { name, email, message } = req.body;
-  console.log(name, email, message);
-
-  const mailOptions = {
-    from: email,
-    to: process.env.EMAIL_USER, 
-    subject: name,
-    text: message,
-  };
-
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      return res.status(500).send('Error sending email: ' + error.toString());
+app.post("/send-email", async (req, res) => {
+  try {
+    const { name, email, message } = req.body;
+    if (!name || !email || !message) {
+      return res.status(400).json({ error: "All fields are required!" });
     }
-    res.status(200).send('Email sent: ' + info.response);
-  });
+
+    const mailOptions = {
+      from: email,
+      to: process.env.EMAIL_USER,
+      subject: `New Message from ${name}`,
+      text: `Sender: ${name} (${email})\n\nMessage:\n${message}`,
+    };
+
+    const info = await transporter.sendMail(mailOptions);
+    res.status(200).json({ message: "Email sent successfully!" });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to send email" });
+  }
 });
 
 const PORT = process.env.PORT || 5000;

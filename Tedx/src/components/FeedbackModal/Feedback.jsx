@@ -23,7 +23,7 @@ const Feedback = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await axios.post("https://tedx-v8jh.onrender.com/send-email", formData);
+      const response = await axios.post("https://tedx-m068.onrender.com/send-email", formData);
       console.log(response.data);
       setStatus('Message sent successfully!');
       setFormData({ name: '', email: '', message: '' });
