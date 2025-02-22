@@ -7,6 +7,7 @@ import BijayBairagi from '../../assets/images/speakerImage/BijayBairagi.png';
 import KowshikMaridi from '../../assets/images/speakerImage/KowshikMaridi.png';
 import GallaMadhavi from '../../assets/images/speakerImage/GallaMadhavi.png';
 import Bhaskar from '../../assets/images/speakerImage/Bhaskar.png';
+import EshwarBolegar from '../../assets/images/speakerImage/EshwarBolegar.png';
 import Raul from '../../assets/images/speakerImage/Raul.jpg';
 
 
@@ -52,6 +53,12 @@ export const speakers = [
     role: 'Founder & CEO Forttuna Group',
     image: Raul,
     description: 'Raul Handa, Founder and CEO of The Forttuna Group, has embarked on an extraordinary journey of growth, innovation, and purpose, Leading a dynamic organization with nine. thriving verticals, Raul has dedicated his career to creating impactful solutions while empowering individuals and organizations to excel. As a celebrated keynote speaker, serial entrepreneur, Investor, board member, advisor, and mentor, he has inspired audiences globally with his insights on leadership, entrepreneurship, and innovation. With expertise in scaling businesses, managing diverse teams of 10,000+, and driving sustainable success, Raul continues to shape industries and inspire excellence worldwide.'
+  },
+  {
+    name: 'Eshwar Bolegar',
+    role: 'Fitness Entrepreneur & Content Creator',
+    image: EshwarBolegar,
+    description: 'Eshwar Bolegar is a dynamic 22-year-old fitness entrepreneur and content creator who has already made significant waves in the industry. As the co-founder and senior coach at the Fitnex online training platform, he combines passion with expertise to deliver innovative and effective fitness solutions. His commitment to excellence is highlighted by his impressive achievements—winning Gold at ICN INDIA 2022 and earning the title of Pro Card holder in ICN INDIA 2024. Alongside his coaching duties, Eshwar dedicates himself full-time to producing engaging fitness content. Through his popular YouTube and Instagram channels, he shares expert tips on fitness, lifestyle, and productivity, aiming to inspire and empower college students and young adults to achieve a balanced and healthy life. His work not only motivates his audience to pursue their fitness goals but also provides practical guidance for navigating the challenges of student life and beyond.'
   },
   
 ];
