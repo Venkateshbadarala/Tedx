@@ -7,7 +7,7 @@ import BijayBairagi from '../../assets/images/speakerImage/BijayBairagi.png';
 import KowshikMaridi from '../../assets/images/speakerImage/KowshikMaridi.png';
 import GallaMadhavi from '../../assets/images/speakerImage/GallaMadhavi.png';
 import Bhaskar from '../../assets/images/speakerImage/Bhaskar.png';
-import Raul from '../../assets/images/speakerImage/Raul.png';
+import Raul from '../../assets/images/speakerImage/Raul.jpg';
 
 
 export const speakers = [
