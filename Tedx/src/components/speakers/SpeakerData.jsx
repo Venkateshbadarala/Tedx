@@ -7,6 +7,7 @@ import BijayBairagi from '../../assets/images/speakerImage/BijayBairagi.png';
 import KowshikMaridi from '../../assets/images/speakerImage/KowshikMaridi.png';
 import GallaMadhavi from '../../assets/images/speakerImage/GallaMadhavi.png';
 import Bhaskar from '../../assets/images/speakerImage/Bhaskar.png';
+import Raul from '../../assets/images/speakerImage/Raul.png';
 
 
 export const speakers = [
@@ -45,6 +46,12 @@ export const speakers = [
     role: 'Founder & CEO, Inspire International Foundation',
     image: Bhaskar,
     description: 'Dr. JVS Bhaskar, the visionary Founder and CEO of INSPIRE International Foundation, has established himself as a beacon of hope and inspiration for youth across India. Hailing from a humble village in Andhra Pradesh, his rise to prominence as a motivational speaker and soft skills trainer is a testament to his unshakable commitment to service, leadership, and upliftment of society. Through INSPIRE - Ray of Life, he has impacted thousands of lives, transforming despair into determination and guiding countless youth towards the path of success.Born to Juttada Manikyam and Appalaraju in the village of Indugapalli, East Godavari District, Dr. Bhaskars journey was anything but easy. From a young age, he exhibited exceptional leadership qualities and a strong inclination toward public service. His dedication to education and service was evident as he grew into a role model for his peers. Even during his school days, he earned respect and recognition for his motivational speeches, often being invited to address gatherings of students and educators alike. This early exposure to public speaking and his deep passion for inspiring others set the foundation for his future endeavors.'
+  },
+  {
+    name: 'Raul Handa',
+    role: 'Founder & CEO, Forttuna Group',
+    image: Raul,
+    description: 'Raul Handa, Founder and CEO of The Forttuna Group, has embarked on an extraordinary journey of growth, innovation, and purpose, Leading a dynamic organization with nine. thriving verticals, Raul has dedicated his career to creating impactful solutions while empowering individuals and organizations to excel. As a celebrated keynote speaker, serial entrepreneur, Investor, board member, advisor, and mentor, he has inspired audiences globally with his insights on leadership, entrepreneurship, and innovation. With expertise in scaling businesses, managing diverse teams of 10,000+, and driving sustainable success, Raul continues to shape industries and inspire excellence worldwide.'
   },
   
 ];
