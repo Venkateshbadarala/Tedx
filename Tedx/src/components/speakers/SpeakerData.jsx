@@ -57,7 +57,7 @@ export const speakers = [
   },
   {
     name: 'Mr. Eshwar Bolegar',
-    role: 'Fitness Entrepreneur & Content Creator',
+    role: 'Fitness Influencer',
     image: EshwarBolegar,
     description: 'Eshwar Bolegar is a dynamic 22-year-old fitness entrepreneur and content creator who has already made significant waves in the industry. As the co-founder and senior coach at the Fitnex online training platform, he combines passion with expertise to deliver innovative and effective fitness solutions. His commitment to excellence is highlighted by his impressive achievements—winning Gold at ICN INDIA 2022 and earning the title of Pro Card holder in ICN INDIA 2024. Alongside his coaching duties, Eshwar dedicates himself full-time to producing engaging fitness content. Through his popular YouTube and Instagram channels, he shares expert tips on fitness, lifestyle, and productivity, aiming to inspire and empower college students and young adults to achieve a balanced and healthy life. His work not only motivates his audience to pursue their fitness goals but also provides practical guidance for navigating the challenges of student life and beyond.'
   },
