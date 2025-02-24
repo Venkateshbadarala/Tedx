@@ -77,7 +77,7 @@ export const teamCategories = {
         { name: "MR. VINEETH SATYA", role: "VOLUNTEER", image: vineeth ,LinkedInLink:"https://www.linkedin.com/in/satya-vineeth/",InstagramLink:"https://www.instagram.com/vineeth_satya/",MailLink:"21pa1a12c3@vishnu.edu.in"},
         { name: "MS. DIVYA PABOLU", role: "VOLUNTEER", image: divya ,LinkedInLink:"https://www.linkedin.com/in/divya-pabolu-26648a2b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",InstagramLink:"https://www.instagram.com/divviii___/",MailLink:"22pa1a05b7@vishnu.edu.in"},
         { name: "MS. BHAVANA TAMARAPU", role: "VOLUNTEER", image: bhavana ,LinkedInLink:"https://www.linkedin.com/in/bhavana-tamarapu-421603280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",InstagramLink:"https://www.instagram.com/bhavana_tamarapu_/",MailLink:"22pa1a4515@vishnu.edu.in"},
-        { name: "MS. SATVIKA DASARI", role: "VOLUNTEER", image: satvika,LinkedInLink:"https://www.linkedin.com/in/sathvika-dasari-049678295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",InstagramLink:"https://www.instagram.com/sathvikaldasari?igsh=MWRza3J6ZXRxMnRwYg==",MailLink:"sathvikaldasari@gmail.com" },
+        { name: "MS. SATHVIKA DASARI", role: "VOLUNTEER", image: satvika,LinkedInLink:"https://www.linkedin.com/in/sathvika-dasari-049678295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",InstagramLink:"https://www.instagram.com/sathvikaldasari?igsh=MWRza3J6ZXRxMnRwYg==",MailLink:"sathvikaldasari@gmail.com" },
       
     ],
     "HOSPITALITY TEAM": [
