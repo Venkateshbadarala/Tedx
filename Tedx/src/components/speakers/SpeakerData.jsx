@@ -9,6 +9,7 @@ import GallaMadhavi from '../../assets/images/speakerImage/GallaMadhavi.png';
 import Bhaskar from '../../assets/images/speakerImage/Bhaskar.png';
 import EshwarBolegar from '../../assets/images/speakerImage/EshwarBolegar.png';
 import SandeepIsrani from '../../assets/images/speakerImage/SandeepIsrani.png';
+import SahithiDivi from '../../assets/images/speakerImage/SahithiDivi.png';
 import Raul from '../../assets/images/speakerImage/Raul.jpg';
 
 
@@ -66,6 +67,12 @@ export const speakers = [
     role: 'Partner, Tulip Group',
     image: SandeepIsrani,
     description: 'Mr. Sandeep Israni is a visionary leader known for his innovative approach and commitment to challenging conventional norms. With over 20 years of experience in real estate sales and marketing, he has been instrumental in driving transformative projects that inspire and connect communities. As a Partner at Tulip Group since April 2022, Sandeep oversees sales, marketing, and customer relations, leading the company to new heights. Before joining Tulip Group, Sandeep co-founded BrightBrain Marketing Technologies LLP in 2016, a full-service digital marketing agency that has grown to over 55 employees under his supervision. As Business Head, he crafted digital solutions that enhanced sales efficiency and brand presence. Sandeep’s passion for education is evident through his role as a Visiting Professor at SCMHRD and Xavier’s Institute of Business Management Studies, where he encourages future leaders to think differently and develop innovative solutions. For Sandeep, success is about setting trends, not following them. Whether in real estate, marketing, or education, he focuses on creating unique, lasting impacts.'
+  },
+  {
+    name: 'Mrs. Sahithi Divi',
+    role: 'Consultat, Government of Andhra Pradesh - Tourism Department',
+    image: SahithiDivi,
+    description: 'Sahithi Divi is a visionary social impact leader and Forbes India 30 Under 30 honoree, redefining grassroots innovation and cultural diplomacy. With over nine years of immersive fieldwork across 150+ villages, she bridges tradition with modernity, empowering rural entrepreneurs through storytelling and sustainable design thinking. As a Consultant for Tourism and Sustainability with the Government of Andhra Pradesh, she crafts strategic narratives that spotlight local culture on a global stage. Sahithi’s work transcends conventional development models by linking community wisdom with innovative solutions, advancing the UN SDGs through creative, scalable impact. With a Master’s in Social Entrepreneurship from Hult International Business School and a certification from Harvard Business School Online, Sahithi combines strategic insight with grassroots passion, inspiring a new wave of cultural preservation and sustainable growth.'
   },
   
 ];
