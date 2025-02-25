@@ -70,7 +70,7 @@ export const speakers = [
   },
   {
     name: 'Mrs. Sahithi Divi',
-    role: 'Consultat, Government of Andhra Pradesh - Tourism Department',
+    role: 'Consultant, Government of Andhra Pradesh - Tourism Department',
     image: SahithiDivi,
     description: 'Sahithi Divi is a visionary social impact leader and Forbes India 30 Under 30 honoree, redefining grassroots innovation and cultural diplomacy. With over nine years of immersive fieldwork across 150+ villages, she bridges tradition with modernity, empowering rural entrepreneurs through storytelling and sustainable design thinking. As a Consultant for Tourism and Sustainability with the Government of Andhra Pradesh, she crafts strategic narratives that spotlight local culture on a global stage. Sahithi’s work transcends conventional development models by linking community wisdom with innovative solutions, advancing the UN SDGs through creative, scalable impact. With a Master’s in Social Entrepreneurship from Hult International Business School and a certification from Harvard Business School Online, Sahithi combines strategic insight with grassroots passion, inspiring a new wave of cultural preservation and sustainable growth.'
   },
