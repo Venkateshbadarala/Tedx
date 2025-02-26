@@ -98,7 +98,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="mt-6 text-sm text-center">
-        <p>© Copyright 2023 - TEDx Vishnu Institute</p>
+        <p>© Copyright 2024-2025  TEDx Vishnu Institute</p>
       </div>
     </footer>
   );
