@@ -60,7 +60,7 @@ export const teamCategories = {
       { name: "DR. M. VENU", role: "Principal - Vishnu Institute of Technology", image: principal,LinkedInLink:"#",InstagramLink:"#",MailLink:"#" },
       { name: "MRS. M. SRILAKSHMI", role: "Vice Principal - Vishnu Institute of Technology", image: viceprincipal,LinkedInLink:"#",InstagramLink:"#",MailLink:"#" },
     ],
-    "ORGANIZING COMMITEE": [
+    "ORGANIZING COMMITTEE": [
       { name: "MR. SURAJ LANKEY", role: "ORGANIZER", image: suraj,LinkedInLink:"https://www.linkedin.com/in/lankeylaxmisrisuraj/",InstagramLink:"https://www.instagram.com/surajlankey/",MailLink:"21pa1a1263@vishnu.edu.in" },
       { name: "MS. VAISHNAVI DASIKA", role: "CO-ORGANIZER", image: vaishnavi,LinkedInLink:"https://www.linkedin.com/in/vaishnavi-dasika/",InstagramLink:"https://www.instagram.com/vaishnavidasika/",MailLink:"#" },
       { name: "MR. AKASH MALLAREDDY", role: "CURATOR", image: akash,LinkedInLink:"https://www.linkedin.com/in/akash-rao-mallareddy/",InstagramLink:"https://www.instagram.com/akash_mallareddy/",MailLink:"#" },
