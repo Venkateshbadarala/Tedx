@@ -33,12 +33,6 @@ export const speakers = [
     description: 'Kowshik Maridi was born in Bhimavaram, Andhra Pradesh. He pursued an MBA in Finance after discontinuing his CA studies and later ventured into financial education. In 2019, he started his YouTube channel to spread financial awareness among Telugu-speaking audiences. Today, his channel is the most-subscribed personal finance channel in South India, with over 5 million subscribers.Beyond YouTube, Kowshik has built a strong presence on social media, becoming the first personal finance creator in South India to achieve 1 million followers on Instagram, now surpassing 1.3 million. He also has a growing community of 550,000 followers on Facebook. His engaging content on personal finance, investments, and cybercrime awareness has made him one of the most influential finance creators in the region. Kowshik has also collaborated with law enforcement and industry experts to educate people on financial security.'
   },
   {
-    name: 'Mrs. Galla Madhavi',
-    role: 'Director, Vikaas Hospitals & MLA, Guntur West',
-    image: GallaMadhavi,
-    description: 'Galla Madhavi, a dedicated social worker from Mulukuduru village, is committed to public service and community development. With an MCA degree, she initially pursued Civil Services but later found her calling in teaching and philanthropy. She currently serves as the Director of Vikaas Hospitals, striving to provide affordable and quality healthcare. Actively engaged in community service, she organizes free health camps, distributes essential supplies to the needy, and supports employment programs. Through her political campaign, she actively engages with people at the grassroots level, addressing their concerns and working towards their well-being. With her unwavering dedication, she envisions a society where every individual has access to better opportunities and an improved quality of life.'
-  },
-  {
     name: 'Mr. Bijay Bairagi',
     role: 'Supply Chain Management Head, East West Seeds',
     image: BijayBairagi,
@@ -69,7 +63,7 @@ export const speakers = [
     description: 'Mr. Sandeep Israni is a visionary leader known for his innovative approach and commitment to challenging conventional norms. With over 20 years of experience in real estate sales and marketing, he has been instrumental in driving transformative projects that inspire and connect communities. As a Partner at Tulip Group since April 2022, Sandeep oversees sales, marketing, and customer relations, leading the company to new heights. Before joining Tulip Group, Sandeep co-founded BrightBrain Marketing Technologies LLP in 2016, a full-service digital marketing agency that has grown to over 55 employees under his supervision. As Business Head, he crafted digital solutions that enhanced sales efficiency and brand presence. Sandeep’s passion for education is evident through his role as a Visiting Professor at SCMHRD and Xavier’s Institute of Business Management Studies, where he encourages future leaders to think differently and develop innovative solutions. For Sandeep, success is about setting trends, not following them. Whether in real estate, marketing, or education, he focuses on creating unique, lasting impacts.'
   },
   {
-    name: 'Mrs. Sahithi Divi',
+    name: 'Ms. Sahithi Divi',
     role: 'Consultant, Government of Andhra Pradesh - Tourism Department',
     image: SahithiDivi,
     description: 'Sahithi Divi is a visionary social impact leader and Forbes India 30 Under 30 honoree, redefining grassroots innovation and cultural diplomacy. With over nine years of immersive fieldwork across 150+ villages, she bridges tradition with modernity, empowering rural entrepreneurs through storytelling and sustainable design thinking. As a Consultant for Tourism and Sustainability with the Government of Andhra Pradesh, she crafts strategic narratives that spotlight local culture on a global stage. Sahithi’s work transcends conventional development models by linking community wisdom with innovative solutions, advancing the UN SDGs through creative, scalable impact. With a Master’s in Social Entrepreneurship from Hult International Business School and a certification from Harvard Business School Online, Sahithi combines strategic insight with grassroots passion, inspiring a new wave of cultural preservation and sustainable growth.'
