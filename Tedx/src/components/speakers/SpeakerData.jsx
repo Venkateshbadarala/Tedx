@@ -18,7 +18,7 @@ export const speakers = [
     name: 'Mr. Ravi Mantri',
     role: 'Author',
     image: RaviMantri,
-    description: 'Ravi Mantri was born in Andhra Pradesh, South India. He pursued his masters degree from the College of Engineering, JNTU, before moving to Ireland for work. As a techie by profession, Ravi embarked on his literary journey in 2019 with his debut novel, "Amma Diary lo Konni Pageelu". The novel became a best-seller and won the hearts of many readers. In addition to novels, Ravi has penned several short stories that have been published in renowned Telugu magazines. An avid social media influencer, he actively creates relatable content for his followers. Ravi is currently working on his second novel.'
+    description: 'Ravi Mantri was born in Andhra Pradesh, South India. He pursued his masters degree from the College of Engineering, JNTU, before moving to Ireland for work. As a techie by profession, Ravi embarked on his literary journey in 2019 with his debut novel, "Amma Diarylo Konni Pageelu". The novel became a best-seller and won the hearts of many readers. In addition to novels, Ravi has penned several short stories that have been published in renowned Telugu magazines. An avid social media influencer, he actively creates relatable content for his followers. Ravi is currently working on his second novel.'
   },
   {
     name: 'Dr. Moksha',

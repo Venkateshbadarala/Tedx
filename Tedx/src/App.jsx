@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import Navbar from "./components/Navbar";
 import Footer from "./components/pages/Footer";
 import Loading from "./components/Loading";
-
+import BuyTickets from './components/pages/BuyTickets'
 // Lazy-loaded pages
 const LazyHome = React.lazy(() => import("./components/pages/Home"));
 const LazyAbout = React.lazy(() => import("./components/pages/About"));
@@ -59,6 +59,7 @@ const App = () => {
             <Route path="/gallery" element={<LazyGallery />} />
             <Route path="/pastseasons" element={<LazyPastSeasons />} />
             <Route path="/loading" element={<Loading />} />
+            <Route path="/buytickets" element={<BuyTickets />} />
           </Routes>
         </Suspense>
 
