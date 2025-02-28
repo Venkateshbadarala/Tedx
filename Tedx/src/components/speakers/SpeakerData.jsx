@@ -28,7 +28,7 @@ export const speakers = [
   },
  {
     name: 'Mr. Kowshik Maridi',
-    role: 'Finacial Expert',
+    role: 'Financial Expert',
     image: KowshikMaridi,
     description: 'Kowshik Maridi was born in Bhimavaram, Andhra Pradesh. He pursued an MBA in Finance after discontinuing his CA studies and later ventured into financial education. In 2019, he started his YouTube channel to spread financial awareness among Telugu-speaking audiences. Today, his channel is the most-subscribed personal finance channel in South India, with over 5 million subscribers.Beyond YouTube, Kowshik has built a strong presence on social media, becoming the first personal finance creator in South India to achieve 1 million followers on Instagram, now surpassing 1.3 million. He also has a growing community of 550,000 followers on Facebook. His engaging content on personal finance, investments, and cybercrime awareness has made him one of the most influential finance creators in the region. Kowshik has also collaborated with law enforcement and industry experts to educate people on financial security.'
   },
