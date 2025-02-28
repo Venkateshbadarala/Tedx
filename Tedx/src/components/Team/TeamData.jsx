@@ -14,7 +14,7 @@ import akash from '../../assets/images/teamphotos/Akash.png'
 
 // Web Dev team
 
-import venkatesh from '../../assets/images/teamphotos/Venkatesh.png'
+import venkatesh from '../../assets/images/teamphotos/venkatesh.jpg'
 import farhana from '../../assets/images/teamphotos/Farhana.png'
 import bhavani from '../../assets/images/teamphotos/bhavani.png'
 

@@ -8,6 +8,8 @@ const videos = [
   { id: 'buKowS0WB2o', title: 'Video 4' },
   { id: 'Ccd6XJ37lWA', title: 'Video 5' },
   { id: 'lwgFRfSOUB8', title: 'Video 6' },
+  { id: 'fFKh-TaQjgg', title: 'Video 6' },
+  { id: '-P9nIArR-Gw', title: 'Video 6' },
 ];
 
 const GalleryVideos = () => {
